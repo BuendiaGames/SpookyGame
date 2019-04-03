@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://graphics/enemies/ghost.png" type="Texture" id=1]
+[ext_resource path="res://core/ghost.gd" type="Script" id=2]
+[ext_resource path="res://graphics/shaders/light.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "ghost"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 15.0
+
+[node name="ghost" type="Sprite" index="0"]
+
+texture = ExtResource( 1 )
+hframes = 4
+frame = 2
+script = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="anim" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = "ghost"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/ghost = SubResource( 1 )
+blend_times = [  ]
+
+[node name="light" type="Light2D" parent="." index="1"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 0.1
+color = Color( 0.381846, 0.0238037, 0.46875, 1 )
+energy = 1.5
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="area" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area" index="0"]
+
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
+
+

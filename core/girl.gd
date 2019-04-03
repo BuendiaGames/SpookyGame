@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 #Some constants
-const speed = 3.0
+const speed = 1.0
 const run_factor = 1.5
 const max_stam = 10.0 #Time you can run (seconds)  
 const stam_comsumption = 2.0 #Consumption factor
@@ -28,7 +28,6 @@ func _process(delta):
 	move_input(delta) #Make the movement
 	interact() #Possible interact with things
 	
-	print(stamina)
 	
 	move_and_collide(current_speed * vel)
 
@@ -85,10 +84,12 @@ func recover_stamina(sta):
 func _on_check_area_entered(area):
 	collider = area
 
-
 func _on_check_area_exited(area):
 	collider = null
 
+#Caught by monsters
+func caught():
+	print("AAAAAAAAAAA")
 
 # ----------- Auxiliary stuff -----------#
 

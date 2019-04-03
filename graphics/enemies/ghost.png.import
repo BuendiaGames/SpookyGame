@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_recolor.png-6f27d1e86ceea67e44fa82da742bd356.stex"
+path="res://.import/ghost.png-da44c0b2a60aa802a6ecb64ca27d22d5.stex"
 
 [deps]
 
-source_file="res://graphics/tiles/tiles_recolor.png"
-dest_files=[ "res://.import/tiles_recolor.png-6f27d1e86ceea67e44fa82da742bd356.stex" ]
+source_file="res://graphics/enemies/ghost.png"
+dest_files=[ "res://.import/ghost.png-da44c0b2a60aa802a6ecb64ca27d22d5.stex" ]
 
 [params]
 

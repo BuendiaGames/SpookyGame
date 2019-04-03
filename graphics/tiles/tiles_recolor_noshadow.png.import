@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_recolor.png-6f27d1e86ceea67e44fa82da742bd356.stex"
+path="res://.import/tiles_recolor_noshadow.png-184bd37564d0b2bcd3da561f02d27dbb.stex"
 
 [deps]
 
-source_file="res://graphics/tiles/tiles_recolor.png"
-dest_files=[ "res://.import/tiles_recolor.png-6f27d1e86ceea67e44fa82da742bd356.stex" ]
+source_file="res://graphics/tiles/tiles_recolor_noshadow.png"
+dest_files=[ "res://.import/tiles_recolor_noshadow.png-184bd37564d0b2bcd3da561f02d27dbb.stex" ]
 
 [params]
 

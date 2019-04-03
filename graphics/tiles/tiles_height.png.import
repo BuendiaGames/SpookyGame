@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_recolor.png-6f27d1e86ceea67e44fa82da742bd356.stex"
+path="res://.import/tiles_height.png-bcba128f93506ab2e829a53641ca9c5e.stex"
 
 [deps]
 
-source_file="res://graphics/tiles/tiles_recolor.png"
-dest_files=[ "res://.import/tiles_recolor.png-6f27d1e86ceea67e44fa82da742bd356.stex" ]
+source_file="res://graphics/tiles/tiles_height.png"
+dest_files=[ "res://.import/tiles_height.png-bcba128f93506ab2e829a53641ca9c5e.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
