@@ -1,188 +1,7 @@
-[gd_resource type="TileSet" load_steps=40 format=2]
+[gd_resource type="TileSet" load_steps=3 format=2]
 
 [ext_resource path="res://graphics/tiles/tiles_recolor_normal.png" type="Texture" id=1]
-[ext_resource path="res://graphics/tiles/tiles_recolor_noshadow.png" type="Texture" id=2]
-[ext_resource path="res://graphics/tiles/tiles_recolor.png" type="Texture" id=3]
-
-[sub_resource type="ConvexPolygonShape2D" id=1]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -15.8601, -4.8721, 1.87446, -6.15721, 5.98683, -2.30186, 4.95874, 15.4327, -15.8601, 15.6898 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10.8448, 10 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 2.36166, 15.6082 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10.3756, 10.343 )
-
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 11.2977, 11.1233 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 2.25665, 15.8402 )
-
-[sub_resource type="RectangleShape2D" id=7]
-
-custom_solver_bias = 0.0
-extents = Vector2( 11.6988, 10 )
-
-[sub_resource type="RectangleShape2D" id=8]
-
-custom_solver_bias = 0.0
-extents = Vector2( 11.6416, 10.7192 )
-
-[sub_resource type="RectangleShape2D" id=9]
-
-custom_solver_bias = 0.0
-extents = Vector2( 11.1635, 16.1233 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -3.1291, -11.9522, -4.67124, -16.5786, 9.9791, -16.3216, 9.9791, 15.5493 )
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -5.44231, -3.47041, -3.1291, -11.9522, 9.9791, 15.5493 )
-
-[sub_resource type="ConvexPolygonShape2D" id=12]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -5.44231, -3.47041, 9.9791, 15.5493, -16.2373, 16.0634, -15.4662, -6.04064 )
-
-[sub_resource type="RectangleShape2D" id=13]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10.7186, 10 )
-
-[sub_resource type="RectangleShape2D" id=14]
-
-custom_solver_bias = 0.0
-extents = Vector2( 17.0374, 8.0822 )
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -15.3641, 16.2373, -15.3641, -16.6296, 4.9155, -14.8813, 4.9155, -5.09119 )
-
-[sub_resource type="ConvexPolygonShape2D" id=16]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 16.1042, 16.587, -15.3641, 16.2373, 4.9155, -5.09119, 16.1042, -1.94437 )
-
-[sub_resource type="RectangleShape2D" id=17]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16.3529, 7.53065 )
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 4.56546, 6.77408, 4.82248, 16.2839, -14.1973, 16.2839, -13.4262, -14.8159 )
-
-[sub_resource type="ConvexPolygonShape2D" id=19]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 4.56546, 6.77408, -13.4262, -14.8159, 15.6175, -14.5589, 15.6175, 3.94681 )
-
-[sub_resource type="RectangleShape2D" id=20]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.8926, 7.32513 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 15.9946, -14.8279, 16.2516, 16.015, -5.59532, 15.5009, -6.10938, 5.21997 )
-
-[sub_resource type="ConvexPolygonShape2D" id=22]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -15.6192, -15.3419, 15.9946, -14.8279, -6.10938, 5.21997, -15.6192, 3.67783 )
-
-[sub_resource type="RectangleShape2D" id=23]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.36075, 16.1362 )
-
-[sub_resource type="ConvexPolygonShape2D" id=24]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -6.53712, 3.39822, -16.22, 3.68301, -16.22, -16.2523, 7.4176, -15.9675 )
-
-[sub_resource type="ConvexPolygonShape2D" id=25]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -6.53712, 3.39822, 7.4176, -15.9675, 6.27844, 15.3594, -5.11317, 15.3594 )
-
-[sub_resource type="RectangleShape2D" id=26]
-
-custom_solver_bias = 0.0
-extents = Vector2( 5.16319, 16.1931 )
-
-[sub_resource type="ConvexPolygonShape2D" id=27]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 5.08264, 6.06758, 5.08264, 16.3256, -15.6427, 16.1162, -15.6427, -15.9139 )
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 5.08264, 6.06758, -15.6427, -15.9139, 15.9687, -15.7045, 15.7593, 3.34607 )
-
-[sub_resource type="RectangleShape2D" id=29]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.9224, 7.30217 )
-
-[sub_resource type="RectangleShape2D" id=30]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10.8027, 16.1388 )
-
-[sub_resource type="ConvexPolygonShape2D" id=31]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -14.6375, 15.7543, -16.0614, -6.17461, -5.80896, -3.6115, 5.01306, 16.3238 )
-
-[sub_resource type="ConvexPolygonShape2D" id=32]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 8.43056, -15.8575, 5.01306, 16.3238, -5.80896, -3.6115, -4.10022, -6.17461 )
-
-[sub_resource type="ConvexPolygonShape2D" id=33]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -5.52417, -15.8575, 8.43056, -15.8575, -4.10022, -6.17461 )
-
-[sub_resource type="ConvexPolygonShape2D" id=34]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -16.2782, -16.5274, 4.93147, -16.1511, 4.31592, -6.14825, -15.9934, 15.9387 )
-
-[sub_resource type="ConvexPolygonShape2D" id=35]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 15.6183, 16.793, -15.9934, 15.9387, 4.31592, -6.14825, 7.92894, -3.1423 )
-
-[sub_resource type="ConvexPolygonShape2D" id=36]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 )
+[ext_resource path="res://graphics/tiles/tiles_recolor_nowater.png" type="Texture" id=2]
 
 [resource]
 
@@ -197,7 +16,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 0/navigation_offset = Vector2( 16, 16 )
 0/shapes = [  ]
 1/name = "Sprite2"
-1/texture = ExtResource( 3 )
+1/texture = ExtResource( 2 )
 1/normal_map = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
@@ -207,7 +26,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 1/navigation_offset = Vector2( 16, 16 )
 1/shapes = [  ]
 2/name = "Sprite3"
-2/texture = ExtResource( 3 )
+2/texture = ExtResource( 2 )
 2/normal_map = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
@@ -217,7 +36,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 2/navigation_offset = Vector2( 16, 16 )
 2/shapes = [  ]
 3/name = "Sprite4"
-3/texture = ExtResource( 3 )
+3/texture = ExtResource( 2 )
 3/normal_map = ExtResource( 1 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
@@ -227,7 +46,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 3/navigation_offset = Vector2( 16, 16 )
 3/shapes = [  ]
 4/name = "Sprite5"
-4/texture = ExtResource( 3 )
+4/texture = ExtResource( 2 )
 4/normal_map = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
@@ -235,14 +54,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 4/is_autotile = false
 4/occluder_offset = Vector2( 16, 16 )
 4/navigation_offset = Vector2( 16, 16 )
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 9 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 11.3607, 16 )
-} ]
+4/shapes = [  ]
 5/name = "Sprite6"
-5/texture = ExtResource( 3 )
+5/texture = ExtResource( 2 )
 5/normal_map = ExtResource( 1 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
@@ -252,7 +66,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 5/navigation_offset = Vector2( 16, 16 )
 5/shapes = [  ]
 6/name = "Sprite7"
-6/texture = ExtResource( 3 )
+6/texture = ExtResource( 2 )
 6/normal_map = ExtResource( 1 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
@@ -262,7 +76,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 6/navigation_offset = Vector2( 16, 16 )
 6/shapes = [  ]
 7/name = "Sprite8"
-7/texture = ExtResource( 3 )
+7/texture = ExtResource( 2 )
 7/normal_map = ExtResource( 1 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
@@ -270,14 +84,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 7/is_autotile = false
 7/occluder_offset = Vector2( 16, 16 )
 7/navigation_offset = Vector2( 16, 16 )
-7/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 30 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 21.1032, 16 )
-} ]
+7/shapes = [  ]
 8/name = "Sprite9"
-8/texture = ExtResource( 3 )
+8/texture = ExtResource( 2 )
 8/normal_map = ExtResource( 1 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
@@ -285,24 +94,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 8/is_autotile = false
 8/occluder_offset = Vector2( 16, 16 )
 8/navigation_offset = Vector2( 16, 16 )
-8/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 34 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 35 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 36 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+8/shapes = [  ]
 9/name = "Sprite10"
-9/texture = ExtResource( 3 )
+9/texture = ExtResource( 2 )
 9/normal_map = ExtResource( 1 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
@@ -312,7 +106,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 9/navigation_offset = Vector2( 16, 16 )
 9/shapes = [  ]
 10/name = "Sprite11"
-10/texture = ExtResource( 3 )
+10/texture = ExtResource( 2 )
 10/normal_map = ExtResource( 1 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
@@ -322,7 +116,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 10/navigation_offset = Vector2( 16, 16 )
 10/shapes = [  ]
 11/name = "Sprite12"
-11/texture = ExtResource( 3 )
+11/texture = ExtResource( 2 )
 11/normal_map = ExtResource( 1 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
@@ -332,7 +126,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 11/navigation_offset = Vector2( 16, 16 )
 11/shapes = [  ]
 12/name = "Sprite13"
-12/texture = ExtResource( 3 )
+12/texture = ExtResource( 2 )
 12/normal_map = ExtResource( 1 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
@@ -342,7 +136,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 12/navigation_offset = Vector2( 16, 16 )
 12/shapes = [  ]
 13/name = "Sprite14"
-13/texture = ExtResource( 3 )
+13/texture = ExtResource( 2 )
 13/normal_map = ExtResource( 1 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
@@ -350,14 +144,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 13/is_autotile = false
 13/occluder_offset = Vector2( 16, 16 )
 13/navigation_offset = Vector2( 16, 16 )
-13/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+13/shapes = [  ]
 14/name = "Sprite15"
-14/texture = ExtResource( 3 )
+14/texture = ExtResource( 2 )
 14/normal_map = ExtResource( 1 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
@@ -367,7 +156,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 14/navigation_offset = Vector2( 16, 16 )
 14/shapes = [  ]
 15/name = "Sprite16"
-15/texture = ExtResource( 3 )
+15/texture = ExtResource( 2 )
 15/normal_map = ExtResource( 1 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
@@ -377,7 +166,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 15/navigation_offset = Vector2( 16, 16 )
 15/shapes = [  ]
 16/name = "Sprite17"
-16/texture = ExtResource( 3 )
+16/texture = ExtResource( 2 )
 16/normal_map = ExtResource( 1 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
@@ -385,14 +174,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 16/is_autotile = false
 16/occluder_offset = Vector2( 16, 16 )
 16/navigation_offset = Vector2( 16, 16 )
-16/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 21.0489, 10.0044 )
-} ]
+16/shapes = [  ]
 17/name = "Sprite18"
-17/texture = ExtResource( 3 )
+17/texture = ExtResource( 2 )
 17/normal_map = ExtResource( 1 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
@@ -402,7 +186,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 17/navigation_offset = Vector2( 16, 16 )
 17/shapes = [  ]
 18/name = "Sprite19"
-18/texture = ExtResource( 3 )
+18/texture = ExtResource( 2 )
 18/normal_map = ExtResource( 1 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
@@ -412,7 +196,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 18/navigation_offset = Vector2( 16, 16 )
 18/shapes = [  ]
 19/name = "Sprite20"
-19/texture = ExtResource( 3 )
+19/texture = ExtResource( 2 )
 19/normal_map = ExtResource( 1 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
@@ -422,7 +206,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 19/navigation_offset = Vector2( 16, 16 )
 19/shapes = [  ]
 20/name = "Sprite21"
-20/texture = ExtResource( 3 )
+20/texture = ExtResource( 2 )
 20/normal_map = ExtResource( 1 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
@@ -432,7 +216,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 20/navigation_offset = Vector2( 16, 16 )
 20/shapes = [  ]
 21/name = "Sprite22"
-21/texture = ExtResource( 3 )
+21/texture = ExtResource( 2 )
 21/normal_map = ExtResource( 1 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
@@ -440,14 +224,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 21/is_autotile = false
 21/occluder_offset = Vector2( 16, 16 )
 21/navigation_offset = Vector2( 16, 16 )
-21/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 29.4539, 16.6959 )
-} ]
+21/shapes = [  ]
 22/name = "Sprite23"
-22/texture = ExtResource( 3 )
+22/texture = ExtResource( 2 )
 22/normal_map = ExtResource( 1 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
@@ -455,14 +234,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 22/is_autotile = false
 22/occluder_offset = Vector2( 16, 16 )
 22/navigation_offset = Vector2( 16, 16 )
-22/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 21.411, 21.6958 )
-} ]
+22/shapes = [  ]
 23/name = "Sprite24"
-23/texture = ExtResource( 3 )
+23/texture = ExtResource( 2 )
 23/normal_map = ExtResource( 1 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
@@ -472,7 +246,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 23/navigation_offset = Vector2( 16, 16 )
 23/shapes = [  ]
 24/name = "Sprite25"
-24/texture = ExtResource( 3 )
+24/texture = ExtResource( 2 )
 24/normal_map = ExtResource( 1 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
@@ -482,7 +256,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 24/navigation_offset = Vector2( 16, 16 )
 24/shapes = [  ]
 25/name = "Sprite26"
-25/texture = ExtResource( 3 )
+25/texture = ExtResource( 2 )
 25/normal_map = ExtResource( 1 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
@@ -490,14 +264,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 25/is_autotile = false
 25/occluder_offset = Vector2( 16, 16 )
 25/navigation_offset = Vector2( 16, 16 )
-25/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 5 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 20.1754, 20.6393 )
-} ]
+25/shapes = [  ]
 26/name = "Sprite27"
-26/texture = ExtResource( 3 )
+26/texture = ExtResource( 2 )
 26/normal_map = ExtResource( 1 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
@@ -507,7 +276,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 26/navigation_offset = Vector2( 16, 16 )
 26/shapes = [  ]
 27/name = "Sprite28"
-27/texture = ExtResource( 3 )
+27/texture = ExtResource( 2 )
 27/normal_map = ExtResource( 1 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
@@ -517,7 +286,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 27/navigation_offset = Vector2( 16, 16 )
 27/shapes = [  ]
 28/name = "Sprite29"
-28/texture = ExtResource( 3 )
+28/texture = ExtResource( 2 )
 28/normal_map = ExtResource( 1 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
@@ -527,7 +296,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 28/navigation_offset = Vector2( 16, 16 )
 28/shapes = [  ]
 29/name = "Sprite30"
-29/texture = ExtResource( 3 )
+29/texture = ExtResource( 2 )
 29/normal_map = ExtResource( 1 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
@@ -537,7 +306,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 29/navigation_offset = Vector2( 16, 16 )
 29/shapes = [  ]
 30/name = "Sprite31"
-30/texture = ExtResource( 3 )
+30/texture = ExtResource( 2 )
 30/normal_map = ExtResource( 1 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
@@ -545,14 +314,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 30/is_autotile = false
 30/occluder_offset = Vector2( 16, 16 )
 30/navigation_offset = Vector2( 16, 16 )
-30/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 6 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 2.0822, 15.768 )
-} ]
+30/shapes = [  ]
 31/name = "Sprite32"
-31/texture = ExtResource( 3 )
+31/texture = ExtResource( 2 )
 31/normal_map = ExtResource( 1 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
@@ -560,14 +324,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 31/is_autotile = false
 31/occluder_offset = Vector2( 16, 16 )
 31/navigation_offset = Vector2( 16, 16 )
-31/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 7 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 20.5454, 9.70634 )
-} ]
+31/shapes = [  ]
 32/name = "Sprite33"
-32/texture = ExtResource( 3 )
+32/texture = ExtResource( 2 )
 32/normal_map = ExtResource( 1 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
@@ -577,7 +336,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 32/navigation_offset = Vector2( 16, 16 )
 32/shapes = [  ]
 33/name = "Sprite34"
-33/texture = ExtResource( 3 )
+33/texture = ExtResource( 2 )
 33/normal_map = ExtResource( 1 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
@@ -587,7 +346,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 33/navigation_offset = Vector2( 16, 16 )
 33/shapes = [  ]
 34/name = "Sprite35"
-34/texture = ExtResource( 3 )
+34/texture = ExtResource( 2 )
 34/normal_map = ExtResource( 1 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
@@ -595,14 +354,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 34/is_autotile = false
 34/occluder_offset = Vector2( 16, 16 )
 34/navigation_offset = Vector2( 16, 16 )
-34/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 8 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 11.2766, 20.7234 )
-} ]
+34/shapes = [  ]
 35/name = "Sprite36"
-35/texture = ExtResource( 3 )
+35/texture = ExtResource( 2 )
 35/normal_map = ExtResource( 1 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
@@ -612,7 +366,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 35/navigation_offset = Vector2( 16, 16 )
 35/shapes = [  ]
 36/name = "Sprite37"
-36/texture = ExtResource( 3 )
+36/texture = ExtResource( 2 )
 36/normal_map = ExtResource( 1 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
@@ -622,7 +376,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 36/navigation_offset = Vector2( 16, 16 )
 36/shapes = [  ]
 37/name = "Sprite38"
-37/texture = ExtResource( 3 )
+37/texture = ExtResource( 2 )
 37/normal_map = ExtResource( 1 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
@@ -632,7 +386,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 37/navigation_offset = Vector2( 16, 16 )
 37/shapes = [  ]
 38/name = "Sprite39"
-38/texture = ExtResource( 3 )
+38/texture = ExtResource( 2 )
 38/normal_map = ExtResource( 1 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
@@ -642,7 +396,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 38/navigation_offset = Vector2( 16, 16 )
 38/shapes = [  ]
 39/name = "Sprite40"
-39/texture = ExtResource( 3 )
+39/texture = ExtResource( 2 )
 39/normal_map = ExtResource( 1 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
@@ -652,7 +406,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 39/navigation_offset = Vector2( 16, 16 )
 39/shapes = [  ]
 40/name = "Sprite41"
-40/texture = ExtResource( 3 )
+40/texture = ExtResource( 2 )
 40/normal_map = ExtResource( 1 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
@@ -660,24 +414,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 40/is_autotile = false
 40/occluder_offset = Vector2( 16, 16 )
 40/navigation_offset = Vector2( 16, 16 )
-40/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 10 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 11 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 12 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+40/shapes = [  ]
 41/name = "Sprite42"
-41/texture = ExtResource( 3 )
+41/texture = ExtResource( 2 )
 41/normal_map = ExtResource( 1 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
@@ -687,7 +426,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 41/navigation_offset = Vector2( 16, 16 )
 41/shapes = [  ]
 42/name = "Sprite43"
-42/texture = ExtResource( 3 )
+42/texture = ExtResource( 2 )
 42/normal_map = ExtResource( 1 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
@@ -697,7 +436,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 42/navigation_offset = Vector2( 16, 16 )
 42/shapes = [  ]
 43/name = "Sprite44"
-43/texture = ExtResource( 3 )
+43/texture = ExtResource( 2 )
 43/normal_map = ExtResource( 1 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
@@ -705,14 +444,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 43/is_autotile = false
 43/occluder_offset = Vector2( 16, 16 )
 43/navigation_offset = Vector2( 16, 16 )
-43/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 13 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 10.8738, 10.0194 )
-} ]
+43/shapes = [  ]
 44/name = "Sprite45"
-44/texture = ExtResource( 3 )
+44/texture = ExtResource( 2 )
 44/normal_map = ExtResource( 1 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
@@ -722,7 +456,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 44/navigation_offset = Vector2( 16, 16 )
 44/shapes = [  ]
 45/name = "Sprite46"
-45/texture = ExtResource( 3 )
+45/texture = ExtResource( 2 )
 45/normal_map = ExtResource( 1 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
@@ -732,7 +466,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 45/navigation_offset = Vector2( 16, 16 )
 45/shapes = [  ]
 46/name = "Sprite47"
-46/texture = ExtResource( 3 )
+46/texture = ExtResource( 2 )
 46/normal_map = ExtResource( 1 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
@@ -742,7 +476,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 46/navigation_offset = Vector2( 16, 16 )
 46/shapes = [  ]
 47/name = "Sprite48"
-47/texture = ExtResource( 3 )
+47/texture = ExtResource( 2 )
 47/normal_map = ExtResource( 1 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
@@ -752,7 +486,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 47/navigation_offset = Vector2( 16, 16 )
 47/shapes = [  ]
 48/name = "Sprite49"
-48/texture = ExtResource( 3 )
+48/texture = ExtResource( 2 )
 48/normal_map = ExtResource( 1 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
@@ -760,14 +494,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 48/is_autotile = false
 48/occluder_offset = Vector2( 16, 16 )
 48/navigation_offset = Vector2( 16, 16 )
-48/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 14 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16.6959, 11.1288 )
-} ]
+48/shapes = [  ]
 49/name = "Sprite50"
-49/texture = ExtResource( 3 )
+49/texture = ExtResource( 2 )
 49/normal_map = ExtResource( 1 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
@@ -775,19 +504,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 49/is_autotile = false
 49/occluder_offset = Vector2( 16, 16 )
 49/navigation_offset = Vector2( 16, 16 )
-49/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 15 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 16 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+49/shapes = [  ]
 50/name = "Sprite51"
-50/texture = ExtResource( 3 )
+50/texture = ExtResource( 2 )
 50/normal_map = ExtResource( 1 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
@@ -797,7 +516,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 50/navigation_offset = Vector2( 16, 16 )
 50/shapes = [  ]
 51/name = "Sprite52"
-51/texture = ExtResource( 3 )
+51/texture = ExtResource( 2 )
 51/normal_map = ExtResource( 1 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
@@ -805,14 +524,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 51/is_autotile = false
 51/occluder_offset = Vector2( 16, 16 )
 51/navigation_offset = Vector2( 16, 16 )
-51/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 17 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 12.8673 )
-} ]
+51/shapes = [  ]
 52/name = "Sprite53"
-52/texture = ExtResource( 3 )
+52/texture = ExtResource( 2 )
 52/normal_map = ExtResource( 1 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
@@ -820,19 +534,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 52/is_autotile = false
 52/occluder_offset = Vector2( 16, 16 )
 52/navigation_offset = Vector2( 16, 16 )
-52/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 18 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 19 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+52/shapes = [  ]
 53/name = "Sprite54"
-53/texture = ExtResource( 3 )
+53/texture = ExtResource( 2 )
 53/normal_map = ExtResource( 1 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
@@ -842,7 +546,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 53/navigation_offset = Vector2( 16, 16 )
 53/shapes = [  ]
 54/name = "Sprite55"
-54/texture = ExtResource( 3 )
+54/texture = ExtResource( 2 )
 54/normal_map = ExtResource( 1 )
 54/tex_offset = Vector2( 0, 0 )
 54/modulate = Color( 1, 1, 1, 1 )
@@ -852,7 +556,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 54/navigation_offset = Vector2( 16, 16 )
 54/shapes = [  ]
 55/name = "Sprite56"
-55/texture = ExtResource( 3 )
+55/texture = ExtResource( 2 )
 55/normal_map = ExtResource( 1 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
@@ -862,7 +566,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 55/navigation_offset = Vector2( 16, 16 )
 55/shapes = [  ]
 56/name = "Sprite57"
-56/texture = ExtResource( 3 )
+56/texture = ExtResource( 2 )
 56/normal_map = ExtResource( 1 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
@@ -872,7 +576,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 56/navigation_offset = Vector2( 16, 16 )
 56/shapes = [  ]
 57/name = "Sprite58"
-57/texture = ExtResource( 3 )
+57/texture = ExtResource( 2 )
 57/normal_map = ExtResource( 1 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
@@ -880,14 +584,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 57/is_autotile = false
 57/occluder_offset = Vector2( 16, 16 )
 57/navigation_offset = Vector2( 16, 16 )
-57/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 20 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 15.4332, 18.4562 )
-} ]
+57/shapes = [  ]
 58/name = "Sprite59"
-58/texture = ExtResource( 3 )
+58/texture = ExtResource( 2 )
 58/normal_map = ExtResource( 1 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
@@ -895,19 +594,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 58/is_autotile = false
 58/occluder_offset = Vector2( 16, 16 )
 58/navigation_offset = Vector2( 16, 16 )
-58/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 21 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 22 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+58/shapes = [  ]
 59/name = "Sprite60"
-59/texture = ExtResource( 3 )
+59/texture = ExtResource( 2 )
 59/normal_map = ExtResource( 1 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
@@ -917,7 +606,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 59/navigation_offset = Vector2( 16, 16 )
 59/shapes = [  ]
 60/name = "Sprite61"
-60/texture = ExtResource( 3 )
+60/texture = ExtResource( 2 )
 60/normal_map = ExtResource( 1 )
 60/tex_offset = Vector2( 0, 0 )
 60/modulate = Color( 1, 1, 1, 1 )
@@ -925,14 +614,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 60/is_autotile = false
 60/occluder_offset = Vector2( 16, 16 )
 60/navigation_offset = Vector2( 16, 16 )
-60/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 23 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+60/shapes = [  ]
 61/name = "Sprite62"
-61/texture = ExtResource( 3 )
+61/texture = ExtResource( 2 )
 61/normal_map = ExtResource( 1 )
 61/tex_offset = Vector2( 0, 0 )
 61/modulate = Color( 1, 1, 1, 1 )
@@ -940,19 +624,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 61/is_autotile = false
 61/occluder_offset = Vector2( 16, 16 )
 61/navigation_offset = Vector2( 16, 16 )
-61/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 24 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 25 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+61/shapes = [  ]
 62/name = "Sprite63"
-62/texture = ExtResource( 3 )
+62/texture = ExtResource( 2 )
 62/normal_map = ExtResource( 1 )
 62/tex_offset = Vector2( 0, 0 )
 62/modulate = Color( 1, 1, 1, 1 )
@@ -962,7 +636,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 62/navigation_offset = Vector2( 16, 16 )
 62/shapes = [  ]
 63/name = "Sprite64"
-63/texture = ExtResource( 3 )
+63/texture = ExtResource( 2 )
 63/normal_map = ExtResource( 1 )
 63/tex_offset = Vector2( 0, 0 )
 63/modulate = Color( 1, 1, 1, 1 )
@@ -972,7 +646,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 63/navigation_offset = Vector2( 16, 16 )
 63/shapes = [  ]
 64/name = "Sprite65"
-64/texture = ExtResource( 3 )
+64/texture = ExtResource( 2 )
 64/normal_map = ExtResource( 1 )
 64/tex_offset = Vector2( 0, 0 )
 64/modulate = Color( 1, 1, 1, 1 )
@@ -982,7 +656,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 64/navigation_offset = Vector2( 16, 16 )
 64/shapes = [  ]
 65/name = "Sprite66"
-65/texture = ExtResource( 3 )
+65/texture = ExtResource( 2 )
 65/normal_map = ExtResource( 1 )
 65/tex_offset = Vector2( 0, 0 )
 65/modulate = Color( 1, 1, 1, 1 )
@@ -992,7 +666,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 65/navigation_offset = Vector2( 16, 16 )
 65/shapes = [  ]
 66/name = "Sprite67"
-66/texture = ExtResource( 3 )
+66/texture = ExtResource( 2 )
 66/normal_map = ExtResource( 1 )
 66/tex_offset = Vector2( 0, 0 )
 66/modulate = Color( 1, 1, 1, 1 )
@@ -1000,14 +674,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 66/is_autotile = false
 66/occluder_offset = Vector2( 16, 16 )
 66/navigation_offset = Vector2( 16, 16 )
-66/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 26 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 14.9719, 16.257 )
-} ]
+66/shapes = [  ]
 67/name = "Sprite68"
-67/texture = ExtResource( 3 )
+67/texture = ExtResource( 2 )
 67/normal_map = ExtResource( 1 )
 67/tex_offset = Vector2( 0, 0 )
 67/modulate = Color( 1, 1, 1, 1 )
@@ -1015,19 +684,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 67/is_autotile = false
 67/occluder_offset = Vector2( 16, 16 )
 67/navigation_offset = Vector2( 16, 16 )
-67/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 27 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 28 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+67/shapes = [  ]
 68/name = "Sprite69"
-68/texture = ExtResource( 3 )
+68/texture = ExtResource( 2 )
 68/normal_map = ExtResource( 1 )
 68/tex_offset = Vector2( 0, 0 )
 68/modulate = Color( 1, 1, 1, 1 )
@@ -1037,7 +696,7 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 68/navigation_offset = Vector2( 16, 16 )
 68/shapes = [  ]
 69/name = "Sprite70"
-69/texture = ExtResource( 3 )
+69/texture = ExtResource( 2 )
 69/normal_map = ExtResource( 1 )
 69/tex_offset = Vector2( 0, 0 )
 69/modulate = Color( 1, 1, 1, 1 )
@@ -1045,14 +704,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 69/is_autotile = false
 69/occluder_offset = Vector2( 16, 16 )
 69/navigation_offset = Vector2( 16, 16 )
-69/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 29 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+69/shapes = [  ]
 70/name = "Sprite71"
-70/texture = ExtResource( 3 )
+70/texture = ExtResource( 2 )
 70/normal_map = ExtResource( 1 )
 70/tex_offset = Vector2( 0, 0 )
 70/modulate = Color( 1, 1, 1, 1 )
@@ -1060,24 +714,9 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 70/is_autotile = false
 70/occluder_offset = Vector2( 16, 16 )
 70/navigation_offset = Vector2( 16, 16 )
-70/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 31 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 32 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 33 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
+70/shapes = [  ]
 71/name = "Sprite72"
-71/texture = ExtResource( 3 )
+71/texture = ExtResource( 2 )
 71/normal_map = ExtResource( 1 )
 71/tex_offset = Vector2( 0, 0 )
 71/modulate = Color( 1, 1, 1, 1 )
@@ -1086,5 +725,4 @@ points = PoolVector2Array( 15.6183, 16.793, 7.92894, -3.1423, 16.1654, -2.91658 
 71/occluder_offset = Vector2( 16, 16 )
 71/navigation_offset = Vector2( 16, 16 )
 71/shapes = [  ]
-_sections_unfolded = [ "Resource" ]
 

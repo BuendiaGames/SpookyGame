@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://core/girl.gd" type="Script" id=1]
 [ext_resource path="res://graphics/girl.png" type="Texture" id=2]
 [ext_resource path="res://graphics/shaders/light.png" type="Texture" id=3]
+[ext_resource path="res://core/shaders/fog.shader" type="Shader" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -240,7 +242,17 @@ _sections_unfolded = [ "Fog", "Glow" ]
 custom_solver_bias = 0.0
 radius = 3.0
 
-[node name="Girl" type="KinematicBody2D"]
+[sub_resource type="ShaderMaterial" id=8]
+
+render_priority = 0
+shader = ExtResource( 4 )
+shader_param/dir = null
+shader_param/selectable_color = Color( 0.57501, 0.391388, 0.742188, 1 )
+shader_param/color = null
+shader_param/OCTAVES = null
+_sections_unfolded = [ "shader_param" ]
+
+[node name="Girl" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -279,6 +291,7 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="camera" type="Camera2D" parent="." index="3"]
 
+editor/display_folded = true
 anchor_mode = 1
 rotating = false
 current = true
@@ -347,6 +360,38 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Visibility" ]
+
+[node name="fog" type="ParallaxBackground" parent="." index="6"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+_sections_unfolded = [ "Scroll" ]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="fog" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0.1, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="fog/ParallaxLayer" index="0"]
+
+visible = false
+material = SubResource( 8 )
+scale = Vector2( 16, 10 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+_sections_unfolded = [ "Material", "Region", "Transform" ]
 
 [connection signal="area_entered" from="check" to="." method="_on_check_area_entered"]
 
