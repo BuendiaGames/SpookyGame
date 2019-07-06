@@ -17,10 +17,17 @@ var anim = ""
 #Collision logic
 var collider = null #Who I am detecting to interact with
 
+#GUI 
+var lifebar
 
 # ----------- Main logic --------------- #
 
 func _ready():
+	#Store lifebar value and share the max value
+	lifebar = get_tree().get_nodes_in_group("gui")[0]
+	lifebar.set_max_stamina(max_stam)
+	lifebar.set_bar_value(stamina)
+	
 	set_process(true)
 
 func _process(delta):
@@ -78,6 +85,15 @@ func interact():
 #Recovers a bit of stamina
 func recover_stamina(sta):
 	stamina = min(stamina + sta, max_stam)
+	lifebar.set_bar_value(stamina)
+
+#Gradually reduces stamina up to 0
+func reduce_stamina(amount):
+	
+	if (stamina > 0.0):
+		stamina = max(stamina - stam_comsumption * amount, 0.0)
+	
+	lifebar.set_bar_value(stamina)
 
 # ---------- Colision management ------- #
 
@@ -98,12 +114,6 @@ func set_anim(new_anim):
 	if (new_anim != anim):
 		$anim.play(new_anim)
 		anim = new_anim
-
-#Gradually reduces stamina up to 0
-func reduce_stamina(amount):
-	
-	if (stamina > 0.0):
-		stamina = max(stamina - stam_comsumption * amount, 0.0)
 
 
 

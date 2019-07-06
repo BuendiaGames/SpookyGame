@@ -3,7 +3,7 @@
 [ext_resource path="res://graphics/shaders/water_uv_offset_32.png" type="Texture" id=1]
 [ext_resource path="res://graphics/tiles/water.png" type="Texture" id=2]
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="Shader" id=1]
 
 code = "shader_type canvas_item;
 
@@ -34,7 +34,7 @@ _sections_unfolded = [ "Resource" ]
 [sub_resource type="ShaderMaterial" id=2]
 
 render_priority = 0
-shader = SubResource( 3 )
+shader = SubResource( 1 )
 shader_param/tile_factor = null
 shader_param/aspect_ratio = null
 shader_param/uv_offset_size = null
@@ -42,9 +42,8 @@ shader_param/wave_size = null
 shader_param/uv_offset_texture = ExtResource( 1 )
 _sections_unfolded = [ "shader_param" ]
 
-[node name="water" type="Sprite" index="0"]
+[node name="water" type="Sprite"]
 
-visible = false
 material = SubResource( 2 )
 position = Vector2( 57.2241, 33.3316 )
 scale = Vector2( 4.57651, 3.08322 )

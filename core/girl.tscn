@@ -252,7 +252,9 @@ shader_param/color = null
 shader_param/OCTAVES = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Girl" type="KinematicBody2D" index="0"]
+[node name="Girl" type="KinematicBody2D" groups=[
+"player",
+]]
 
 input_pickable = false
 collision_layer = 1
