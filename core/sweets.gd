@@ -15,6 +15,8 @@ func set_color():
 	
 
 func _ready():
+	randomize()
+	set_color()
 	pass
 
 # Recover stamina when you get the sweeeet 
