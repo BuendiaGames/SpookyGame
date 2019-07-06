@@ -16,7 +16,11 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
+<<<<<<< abcbbc50063327249a52d367376c018af010bf8b
+flags/filter=true
+=======
 flags/filter=false
+>>>>>>> Added sweet scene, working on it
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

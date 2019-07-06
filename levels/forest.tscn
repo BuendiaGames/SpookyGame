@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://graphics/tiles/tileset_no_water.tres" type="TileSet" id=1]
 [ext_resource path="res://graphics/shaders/light.png" type="Texture" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=5]
 [ext_resource path="res://core/ghost.tscn" type="PackedScene" id=6]
+[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=7]
 
-[node name="level" type="Node2D" index="0"]
+[node name="level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -80,7 +81,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="water" parent="water" index="0" instance=ExtResource( 5 )]
 
-visible = true
 position = Vector2( 403.388, 349.666 )
 scale = Vector2( 7.28825, 4.35411 )
 
@@ -99,5 +99,9 @@ position = Vector2( 700, 490 )
 [node name="ghost3" parent="ghosts" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 160, 460 )
+
+[node name="Area2D" parent="." index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 400.952, 170.329 )
 
 
