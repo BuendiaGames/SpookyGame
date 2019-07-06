@@ -1,6 +1,6 @@
 extends Area2D
 
-var recup = 1.0
+var recup = 5.0
 
 # Choose the color of the sweeeets
 func set_color():
