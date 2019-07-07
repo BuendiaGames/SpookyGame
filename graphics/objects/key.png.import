@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/caramelo.png-f14d5a153cd08c66a8108ceddf90f181.stex"
+path="res://.import/key.png-6155efc454d3b33b4bd5e161bd052c51.stex"
 
 [deps]
 
-source_file="res://graphics/objects/caramelo.png"
-dest_files=[ "res://.import/caramelo.png-f14d5a153cd08c66a8108ceddf90f181.stex" ]
+source_file="res://graphics/objects/key.png"
+dest_files=[ "res://.import/key.png-6155efc454d3b33b4bd5e161bd052c51.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
