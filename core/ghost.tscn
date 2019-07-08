@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://graphics/enemies/ghost.png" type="Texture" id=1]
+[ext_resource path="res://graphics/enemies/ghost_bn.png" type="Texture" id=1]
 [ext_resource path="res://core/ghost.gd" type="Script" id=2]
 [ext_resource path="res://graphics/shaders/light.png" type="Texture" id=3]
 
@@ -54,7 +54,7 @@ editor_only = false
 texture = ExtResource( 3 )
 offset = Vector2( 0, 0 )
 texture_scale = 0.1
-color = Color( 0.381846, 0.0238037, 0.46875, 1 )
+color = Color( 1, 1, 1, 1 )
 energy = 1.5
 mode = 0
 range_height = 0.0

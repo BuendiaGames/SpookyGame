@@ -4,7 +4,7 @@ extends KinematicBody2D
 const speed = 1.0
 const run_factor = 1.5
 const max_stam = 10.0 #Time you can run (seconds)  
-const stam_comsumption = 2.0 #Consumption factor
+const stam_comsumption = 1.0 #Consumption factor
 
 #Current speed and direction
 var current_speed
@@ -65,7 +65,7 @@ func move_input(delta):
 		vel = Vector2(0.0, 0.0)
 	
 	#Check if we are running or not
-	if Input.is_action_pressed("run") and stamina > 0.0:
+	if Input.is_action_pressed("run") and stamina > 0.0 and vel != Vector2(0.0,0.0):
 		current_speed = speed * run_factor
 		$anim.playback_speed = run_factor
 		reduce_stamina(delta)
