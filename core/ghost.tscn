@@ -28,13 +28,14 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 radius = 15.0
 
-[node name="ghost" type="Sprite" index="0"]
+[node name="ghost" type="Sprite"]
 
 texture = ExtResource( 1 )
 hframes = 4
 frame = 2
 script = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Visibility" ]
+tipo = 0
 
 [node name="anim" type="AnimationPlayer" parent="." index="0"]
 

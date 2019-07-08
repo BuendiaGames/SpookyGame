@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://core/sweets.gd" type="Script" id=1]
-[ext_resource path="res://graphics/sweets/caramelo.png" type="Texture" id=2]
+[ext_resource path="res://graphics/objects/caramelo.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ) ]
 }
 
-[node name="Area2D" type="Area2D" index="0"]
+[node name="Area2D" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
