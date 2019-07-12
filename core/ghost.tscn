@@ -28,7 +28,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 radius = 15.0
 
-[node name="ghost" type="Sprite"]
+[node name="ghost" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 hframes = 4

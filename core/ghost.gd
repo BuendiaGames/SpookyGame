@@ -8,13 +8,18 @@ var other_ghosts
 var speed = 30.0
 var follow_offset = 0.0
 var v
+var centre
+var angle = 0.0
+var rotate_speed = 1
+var radio = 75
 
 
 #Ghost behaviour controller
 const STUPID = 0
 const CLEVER = 1
-const RANDOM = 2
-export(int, "Stupid", "Clever", "Random") var tipo = 0
+const CIRCLE = 2
+const RANDOM = 3
+export(int, "Stupid", "Clever", "Circle", "Random") var tipo = 0
 
 #Instance of main controller
 var controller 
@@ -34,6 +39,10 @@ func _ready():
 		speed = 30.0
 		follow_offset = 60.0
 		set_color(Color("ccbc10"))
+	elif (tipo == CIRCLE):
+		speed = 30.0
+		set_color(Color("cdad20"))
+		centre = self.position
 	elif (tipo == RANDOM):
 		speed = 60.0
 		set_color(Color("46cbce"))
@@ -62,13 +71,26 @@ func _process(delta):
 		direction = seek_point(player.position)
 	elif (tipo == CLEVER):
 		direction = seek_point(player.position + player.vel * follow_offset)
+	elif (tipo == CIRCLE):
+		self.position = do_circle(delta, centre);
 	elif (tipo == RANDOM):
 		pass
-	
-	position += force + direction.normalized() * speed * delta
+	if (tipo != CIRCLE):
+		position += force + direction.normalized() * speed * delta
+
+# Make movement do circles
+func do_circle(d, centro):
+	angle += rotate_speed * d
+	var cosa = Vector2(sin(angle), cos(angle)) * radio
+	var nueva_pos = centre + cosa
+	#self.position = nueva_pos
+	return nueva_pos
+	pass
 
 #Process repulsion with other ghosts
 func repulsion():
+	if (tipo == CIRCLE):
+		pass
 	var force = Vector2(0.0, 0.0)
 	for ghost in other_ghosts:
 			if (ghost != self):
