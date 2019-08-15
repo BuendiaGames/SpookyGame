@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://core/girl.gd" type="Script" id=1]
 [ext_resource path="res://graphics/girl.png" type="Texture" id=2]
@@ -149,16 +149,10 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -21.6086 ) ]
 }
 
-[sub_resource type="Environment" id=6]
-background_mode = 4
-fog_enabled = true
-fog_color = Color( 0.117188, 0.117188, 0.117188, 1 )
-glow_enabled = true
-
-[sub_resource type="CircleShape2D" id=7]
+[sub_resource type="CircleShape2D" id=6]
 radius = 3.0
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 3 )
 shader_param/dir = Vector2( 10, 0 )
 shader_param/selectable_color = Color( 0.57501, 0.391388, 0.742188, 1 )
@@ -188,19 +182,19 @@ anims/right = SubResource( 4 )
 anims/up = SubResource( 5 )
 
 [node name="camera" type="Camera2D" parent="."]
-editor/display_folded = true
 current = true
 zoom = Vector2( 0.5, 0.5 )
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="camera"]
-environment = SubResource( 6 )
+limit_left = -288
+limit_top = -352
+limit_right = 1216
+limit_bottom = 864
 
 [node name="check" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7.62939e-06, -23.1898 )
 
 [node name="circle" type="CollisionShape2D" parent="check"]
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="fog" type="ParallaxBackground" parent="."]
 layer = 1
@@ -211,7 +205,7 @@ motion_offset = Vector2( 0.1, 0 )
 
 [node name="Sprite" type="Sprite" parent="fog/ParallaxLayer"]
 visible = false
-material = SubResource( 8 )
+material = SubResource( 7 )
 scale = Vector2( 16, 10 )
 texture = ExtResource( 4 )
 region_enabled = true
