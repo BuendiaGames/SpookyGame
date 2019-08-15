@@ -75,17 +75,16 @@ func _process(delta):
 		self.position = do_circle(delta, centre);
 	elif (tipo == RANDOM):
 		pass
+	
 	if (tipo != CIRCLE):
 		position += force + direction.normalized() * speed * delta
 
-# Make movement do circles
+# Make movement, do circles
 func do_circle(d, centro):
 	angle += rotate_speed * d
-	var cosa = Vector2(sin(angle), cos(angle)) * radio
-	var nueva_pos = centre + cosa
-	#self.position = nueva_pos
+	var circunf = Vector2(sin(angle), cos(angle)) * radio
+	var nueva_pos = centre + circunf
 	return nueva_pos
-	pass
 
 #Process repulsion with other ghosts
 func repulsion():

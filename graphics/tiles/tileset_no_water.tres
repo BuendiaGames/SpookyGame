@@ -725,4 +725,5 @@
 71/occluder_offset = Vector2( 16, 16 )
 71/navigation_offset = Vector2( 16, 16 )
 71/shapes = [  ]
+_sections_unfolded = [ "0" ]
 
