@@ -21,6 +21,9 @@ var maincontroller = null
 var collider = null #Who I am detecting to interact with
 
 
+var has_key = false
+
+
 # ----------- Main logic --------------- #
 
 func _ready():
@@ -37,6 +40,9 @@ func _process(delta):
 	
 	
 	move_and_collide(current_speed * vel)
+	
+	if (has_key):
+		print("YASSSSS QUEEEN")
 
 
 # ----------- Core functions --------- #
