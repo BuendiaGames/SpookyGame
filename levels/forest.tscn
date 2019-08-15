@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://graphics/tiles/tileset_prueba.tres" type="TileSet" id=1]
 [ext_resource path="res://graphics/shaders/light.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=5]
 [ext_resource path="res://core/ghost.tscn" type="PackedScene" id=6]
 [ext_resource path="res://core/sweet.tscn" type="PackedScene" id=7]
+[ext_resource path="res://core/key.tscn" type="PackedScene" id=8]
 
 [node name="level" type="Node2D"]
 
@@ -63,4 +64,7 @@ position = Vector2( 225.094, 234.246 )
 tipo = 2
 
 [node name="Area2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 400.952, 170.329 )
+position = Vector2( 404.635, 171.557 )
+
+[node name="key" parent="." instance=ExtResource( 8 )]
+position = Vector2( -67.3027, 68.7347 )
