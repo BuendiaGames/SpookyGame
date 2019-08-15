@@ -53,7 +53,7 @@ func _deferred_goto_scene(path):
 	
 	
 	#Set up the new scene
-	current_scene.set_up(values)
+	#current_scene.set_up(values)
 	
 	
 	

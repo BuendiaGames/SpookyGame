@@ -13,6 +13,8 @@ var angle = 0.0
 var rotate_speed = 1
 var radio = 75
 
+#Enabler vars
+var is_active = false
 
 #Ghost behaviour controller
 const STUPID = 0
@@ -55,10 +57,8 @@ func _ready():
 	
 	other_ghosts = get_tree().get_nodes_in_group("ghost")
 	
-	print("GG")
-	print(len(other_ghosts))
 	
-	set_process(true)
+	set_process(is_active)
 
 #Processing of our ghost
 func _process(delta):
@@ -72,7 +72,7 @@ func _process(delta):
 	elif (tipo == CLEVER):
 		direction = seek_point(player.position + player.vel * follow_offset)
 	elif (tipo == CIRCLE):
-		self.position = do_circle(delta, centre);
+		position = do_circle(delta)
 	elif (tipo == RANDOM):
 		pass
 	
@@ -80,7 +80,7 @@ func _process(delta):
 		position += force + direction.normalized() * speed * delta
 
 # Make movement, do circles
-func do_circle(d, centro):
+func do_circle(d):
 	angle += rotate_speed * d
 	var circunf = Vector2(sin(angle), cos(angle)) * radio
 	var nueva_pos = centre + circunf
@@ -92,7 +92,7 @@ func repulsion():
 		pass
 	var force = Vector2(0.0, 0.0)
 	for ghost in other_ghosts:
-			if (ghost != self):
+			if (ghost != self and ghost.is_active):
 				var d = position - ghost.position 
 				force += 30*d / d.length_squared()
 	return force
@@ -111,3 +111,17 @@ func set_color(c):
 func _on_area_body_entered(body):
 	if (body.name == "Girl"):
 		body.caught()
+
+
+
+#The enabler makes ghosts to be on and off
+func _on_enabler_screen_entered():
+	is_active = true
+	show()
+	set_process(true)
+
+
+func _on_enabler_screen_exited():
+	is_active = false
+	hide()
+	set_process(false)

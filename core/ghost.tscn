@@ -5,11 +5,9 @@
 [ext_resource path="res://graphics/shaders/light.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "ghost"
 length = 0.4
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -24,68 +22,32 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=2]
-
-custom_solver_bias = 0.0
 radius = 15.0
 
-[node name="ghost" type="Sprite" index="0"]
-
+[node name="ghost" type="Sprite"]
 texture = ExtResource( 1 )
 hframes = 4
 frame = 2
 script = ExtResource( 2 )
-_sections_unfolded = [ "Animation", "Visibility" ]
-tipo = 0
 
-[node name="anim" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
+[node name="anim" type="AnimationPlayer" parent="."]
 autoplay = "ghost"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/ghost = SubResource( 1 )
-blend_times = [  ]
 
-[node name="light" type="Light2D" parent="." index="1"]
-
-enabled = true
-editor_only = false
+[node name="light" type="Light2D" parent="."]
 texture = ExtResource( 3 )
-offset = Vector2( 0, 0 )
 texture_scale = 0.1
-color = Color( 1, 1, 1, 1 )
 energy = 1.5
-mode = 0
-range_height = 0.0
-range_z_min = -1024
-range_z_max = 1024
-range_layer_min = 0
-range_layer_max = 0
-range_item_cull_mask = 1
-shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 0 )
-shadow_buffer_size = 2048
-shadow_gradient_length = 0.0
-shadow_filter = 0
-shadow_filter_smooth = 0.0
-shadow_item_cull_mask = 1
-_sections_unfolded = [ "Material", "Visibility" ]
 
-[node name="area" type="Area2D" parent="." index="2"]
+[node name="area" type="Area2D" parent="."]
 
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area" index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
 shape = SubResource( 2 )
 
+[node name="enabler" type="VisibilityEnabler2D" parent="."]
+rect = Rect2( -100, -100, 200, 200 )
+process_parent = true
+physics_process_parent = true
 [connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
-
-
+[connection signal="screen_entered" from="enabler" to="." method="_on_enabler_screen_entered"]
+[connection signal="screen_exited" from="enabler" to="." method="_on_enabler_screen_exited"]
