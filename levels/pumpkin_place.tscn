@@ -43,27 +43,55 @@ tile_data = PoolIntArray( -589811, 1, 0, -458758, 1, 0, -524283, 1, 0, -524277, 
 [node name="GUI" parent="GUILayer" instance=ExtResource( 5 )]
 
 [node name="ghosts" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="ghost" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 620, 200 )
+position = Vector2( 1110.51, 437.342 )
 
 [node name="ghost2" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 700, 490 )
+position = Vector2( 147.959, 748.44 )
 
 [node name="ghost3" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 160, 460 )
+position = Vector2( -117.779, 493.404 )
 
 [node name="ghost4" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 177.797, 96.8595 )
+position = Vector2( 735.112, 19.5034 )
 tipo = 1
 
 [node name="ghost5" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 225.094, 234.246 )
+position = Vector2( 235.694, 75.2435 )
 tipo = 2
 
-[node name="Area2D" parent="." instance=ExtResource( 7 )]
+[node name="ghost6" parent="ghosts" instance=ExtResource( 6 )]
+position = Vector2( -111.302, -182.853 )
+
+[node name="ghost7" parent="ghosts" instance=ExtResource( 6 )]
+position = Vector2( 517.838, 440.723 )
+
+[node name="ghost8" parent="ghosts" instance=ExtResource( 6 )]
+position = Vector2( 1051.16, -204.919 )
+tipo = 1
+
+[node name="ghost9" parent="ghosts" instance=ExtResource( 6 )]
+position = Vector2( 849.35, 400.701 )
+tipo = 2
+
+[node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 404.635, 171.557 )
 
+[node name="Area2D" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 136.325, 129.509 )
+
+[node name="Area2D2" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( -45.4415, -386.254 )
+
+[node name="Area2D3" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 543.027, 311.275 )
+
+[node name="Area2D4" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( -608.917, 561.204 )
+
+[node name="Area2D5" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 679.352, -165.862 )
+
 [node name="key" parent="." instance=ExtResource( 8 )]
-position = Vector2( -67.3027, 68.7347 )
+position = Vector2( 269.078, -267.646 )

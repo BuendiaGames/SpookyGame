@@ -10,6 +10,7 @@
 [ext_resource path="res://core/key.tscn" type="PackedScene" id=8]
 
 [node name="level" type="Node2D"]
+position = Vector2( 13.0142, -52.057 )
 
 [node name="water" type="Node2D" parent="."]
 editor/display_folded = true
@@ -43,27 +44,49 @@ tile_data = PoolIntArray( -327689, 8, 0, -262112, 6, 0, 2, 8, 0, 393208, 7, 0, 3
 [node name="GUI" parent="GUILayer" instance=ExtResource( 5 )]
 
 [node name="ghosts" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="ghost" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 620, 200 )
+position = Vector2( 1049.63, 833.631 )
 
 [node name="ghost2" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 700, 490 )
+position = Vector2( 820.544, 403.455 )
+tipo = 2
 
 [node name="ghost3" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 160, 460 )
+position = Vector2( -96.5433, 623.817 )
+tipo = 1
 
 [node name="ghost4" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 177.797, 96.8595 )
+position = Vector2( -106.564, -48.412 )
 tipo = 1
 
 [node name="ghost5" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 225.094, 234.246 )
+position = Vector2( 488.307, 206.265 )
 tipo = 2
 
-[node name="Area2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 404.635, 171.557 )
+[node name="ghost6" parent="ghosts" instance=ExtResource( 6 )]
+position = Vector2( -52.0569, 331.863 )
+tipo = 2
+
+[node name="ghost7" parent="ghosts" instance=ExtResource( 6 )]
+position = Vector2( 336.906, 497.632 )
+
+[node name="caramelos" type="Node2D" parent="."]
+
+[node name="Area2D" parent="caramelos" instance=ExtResource( 7 )]
+position = Vector2( 495.735, 70.6966 )
+
+[node name="Area2D2" parent="caramelos" instance=ExtResource( 7 )]
+position = Vector2( 1135.49, 579.134 )
+
+[node name="Area2D3" parent="caramelos" instance=ExtResource( 7 )]
+position = Vector2( -234.256, 549.852 )
+
+[node name="Area2D4" parent="caramelos" instance=ExtResource( 7 )]
+position = Vector2( 276.553, 374.16 )
 
 [node name="key" parent="." instance=ExtResource( 8 )]
-position = Vector2( -67.3027, 68.7347 )
+position = Vector2( 86.5915, -94.8996 )
+
+[node name="key2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 86.5915, -94.8996 )

@@ -41,31 +41,43 @@ tile_data = PoolIntArray( -589792, 8, 0, -524288, 7, 0, -458736, 6, 0, -393191, 
 [node name="GUILayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="GUILayer" instance=ExtResource( 5 )]
-visible = false
 
 [node name="ghosts" type="Node2D" parent="."]
-editor/display_folded = true
-visible = false
 
 [node name="ghost" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 620, 200 )
+position = Vector2( 1073.16, -62.3544 )
+tipo = 1
 
 [node name="ghost2" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 700, 490 )
+position = Vector2( 355.494, 622.502 )
+tipo = 1
 
 [node name="ghost3" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 160, 460 )
+position = Vector2( 381.488, 67.9329 )
+tipo = 2
 
 [node name="ghost4" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 177.797, 96.8595 )
+position = Vector2( 1052.31, 613.618 )
 tipo = 1
 
 [node name="ghost5" parent="ghosts" instance=ExtResource( 6 )]
-position = Vector2( 225.094, 234.246 )
+position = Vector2( -84.9612, 191.845 )
+tipo = 1
+
+[node name="ghost6" parent="ghosts" instance=ExtResource( 6 )]
+position = Vector2( 719.696, 368.217 )
 tipo = 2
 
-[node name="Area2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 404.635, 171.557 )
+[node name="caramelos" type="Node2D" parent="."]
+
+[node name="Area2D" parent="caramelos" instance=ExtResource( 7 )]
+position = Vector2( 385.108, 336.139 )
+
+[node name="Area2D2" parent="caramelos" instance=ExtResource( 7 )]
+position = Vector2( 633.221, 711.328 )
+
+[node name="Area2D3" parent="caramelos" instance=ExtResource( 7 )]
+position = Vector2( 489.036, -198.946 )
 
 [node name="key" parent="." instance=ExtResource( 8 )]
-position = Vector2( -67.3027, 68.7347 )
+position = Vector2( -109.703, 529.842 )
