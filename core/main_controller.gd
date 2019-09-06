@@ -28,9 +28,9 @@ func choose_scene_spawner():
 	else:
 		key_spawner = "pumpkin_place.tscn"
 		
-	#print(key_spawner)
+	print(key_spawner)
 
-func free_key_if_not_spawn(currentscene): #FIXME Falta llamar esta funcion al entrar en la escena
+func free_key_if_not_spawn(currentscene):
 	if (currentscene != key_spawner):
 		current_scene.get_node("key").queue_free()
 		print("LLAVE ELIMINADA")
@@ -73,6 +73,7 @@ func _deferred_goto_scene(path):
 	
 	# Instance the new scene, save it
 	current_scene = s.instance()
+	free_key_if_not_spawn(current_scene)
 	
 	
 	#Set up the new scene
