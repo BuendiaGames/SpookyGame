@@ -4,13 +4,36 @@ var player = null #Player instance to take its data
 var current_scene = null
 var lifebar = null
 var values = {"stamina":0.0}
-
+var key_spawner = "pumpkin_place.tscn"
 
 
 #Get player, GUI and and scene
 func _ready():
+	randomize()
+	choose_scene_spawner()
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+
+# ---------------- Key spawn ---------------------- #
+func choose_scene_spawner():
+	var rand_num = randf()
+	if (rand_num <= 0.2):
+		key_spawner = "cave.tscn"
+	elif (rand_num <= 0.4):
+		key_spawner = "graveyard.tscn"
+	elif (rand_num <= 0.6):
+		key_spawner = "TORRE.TSCN" # FIXME Poner nombre de escena
+	elif (rand_num <= 0.8):
+		key_spawner = "boatplace.tscn"
+	else:
+		key_spawner = "pumpkin_place.tscn"
+		
+	#print(key_spawner)
+
+func free_key_if_not_spawn(currentscene): #FIXME Falta llamar esta funcion al entrar en la escena
+	if (currentscene != key_spawner):
+		current_scene.get_node("key").queue_free()
+		print("LLAVE ELIMINADA")
 
 # --------------- Player Management --------------- #
 
