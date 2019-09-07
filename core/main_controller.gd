@@ -2,8 +2,9 @@ extends Node
 
 var player = null #Player instance to take its data
 var current_scene = null
+var next_sc_name = null
 var lifebar = null
-var values = {"stamina":0.0}
+var values = {"stamina":0.0, "has_key":false}
 
 
 
@@ -33,14 +34,17 @@ func update_bar(value):
 
 # --------------- Scene controller ---------------- #
 
-func goto_scene(path):
-	call_deferred("_deferred_goto_scene", path)
+func goto_scene(scene_name, pos):
+	next_sc_name = scene_name
+	var path = "levels/" + scene_name + ".tscn"
+	call_deferred("_deferred_goto_scene", path, pos)
 
 
-func _deferred_goto_scene(path):
+func _deferred_goto_scene(path, pos):
 	
 	#Save all our values
 	values["stamina"] = player.stamina
+	values["has_key"] = player.has_key
 	
 	# It is now safe to remove the current scene
 	current_scene.free()
@@ -53,8 +57,8 @@ func _deferred_goto_scene(path):
 	
 	
 	#Set up the new scene
-	#current_scene.set_up(values)
-	
+	current_scene.scene_name = next_sc_name
+	current_scene.set_up(values, pos)
 	
 	
 	# Add it to the active scene, as child of root.

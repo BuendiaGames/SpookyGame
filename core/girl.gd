@@ -20,7 +20,7 @@ var maincontroller = null
 #Collision logic
 var collider = null #Who I am detecting to interact with
 
-
+#Controls key possesion
 var has_key = false
 
 
@@ -32,6 +32,7 @@ func _ready():
 	maincontroller.init_player(self)
 	
 	set_process(true)
+
 
 func _process(delta):
 	
@@ -121,5 +122,11 @@ func set_anim(new_anim):
 		$anim.play(new_anim)
 		anim = new_anim
 
+#Set camera limits
+func camera_lim(left, top, right, down):
+	$camera.limit_left = left
+	$camera.limit_right = right
+	$camera.limit_bottom = down
+	$camera.limit_top = top
 
 
