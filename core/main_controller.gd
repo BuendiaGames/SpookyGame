@@ -5,13 +5,36 @@ var current_scene = null
 var next_sc_name = null
 var lifebar = null
 var values = {"stamina":0.0, "has_key":false}
-
+var key_spawner = "pumpkin_place"
 
 
 #Get player, GUI and and scene
 func _ready():
+	randomize()
+	choose_scene_spawner()
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+
+# ---------------- Key spawn ---------------------- #
+func choose_scene_spawner():
+	var rand_num = randf()
+	if (rand_num <= 0.2):
+		key_spawner = "cave"
+	elif (rand_num <= 0.4):
+		key_spawner = "graveyard"
+	elif (rand_num <= 0.6):
+		key_spawner = "TORRE" # FIXME Poner nombre de escena
+	elif (rand_num <= 0.8):
+		key_spawner = "boatplace"
+	else:
+		key_spawner = "pumpkin_place"
+		
+	print(key_spawner)
+
+func free_key_if_not_spawn(currentscene):
+	if (currentscene.name != key_spawner):
+		current_scene.get_node("key").queue_free()
+		print("LLAVE ELIMINADA")
 
 # --------------- Player Management --------------- #
 
@@ -54,6 +77,7 @@ func _deferred_goto_scene(path, pos):
 	
 	# Instance the new scene, save it
 	current_scene = s.instance()
+	free_key_if_not_spawn(current_scene)
 	
 	
 	#Set up the new scene
