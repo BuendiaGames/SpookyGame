@@ -23,7 +23,7 @@ func choose_scene_spawner():
 	elif (rand_num <= 0.4):
 		key_spawner = "graveyard"
 	elif (rand_num <= 0.6):
-		key_spawner = "TORRE" # FIXME Poner nombre de escena
+		key_spawner = "torre_p1" # FIXME Poner nombre de escena
 	elif (rand_num <= 0.8):
 		key_spawner = "boatplace"
 	else:
@@ -31,10 +31,12 @@ func choose_scene_spawner():
 		
 	print(key_spawner)
 
+#Delete the key if this was not the chosen zone
 func free_key_if_not_spawn(currentscene):
 	if (currentscene.name != key_spawner):
-		current_scene.get_node("key").queue_free()
-		print("LLAVE ELIMINADA")
+		if current_scene.has_node("key"):
+			current_scene.get_node("key").queue_free()
+			print("LLAVE ELIMINADA")
 
 # --------------- Player Management --------------- #
 

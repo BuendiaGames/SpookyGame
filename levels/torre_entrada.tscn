@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=2]
@@ -7,8 +7,7 @@
 [ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=5]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://core/ghost.tscn" type="PackedScene" id=7]
-[ext_resource path="res://core/key.tscn" type="PackedScene" id=8]
-[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 252.636, 70 )
@@ -72,18 +71,15 @@ tipo = 2
 position = Vector2( 706.531, 184.619 )
 tipo = 2
 
-[node name="key" parent="." instance=ExtResource( 8 )]
-position = Vector2( -67.3027, 68.7347 )
-
 [node name="teleport" type="Node2D" parent="."]
 
-[node name="teleporter" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter" parent="teleport" instance=ExtResource( 8 )]
 position = Vector2( 17.0693, 333.297 )
 scale = Vector2( 1, 3.8 )
 scene_name = "forest"
 teleport_place = Vector2( 1140, 575 )
 
-[node name="teleporter2" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter2" parent="teleport" instance=ExtResource( 8 )]
 position = Vector2( 529.66, -96.4085 )
 scale = Vector2( 2.22206, -0.66336 )
 scene_name = "torre_base"
