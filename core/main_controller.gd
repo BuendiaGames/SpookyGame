@@ -71,19 +71,21 @@ func _deferred_goto_scene(path, pos):
 	values["stamina"] = player.stamina
 	values["has_key"] = player.has_key
 	
+	print(path)
+	
 	# It is now safe to remove the current scene
 	current_scene.free()
 	
 	# Load the new scene.
 	var s = ResourceLoader.load(path)
 	
+	print(s)
+	
 	# Instance the new scene, save it
 	current_scene = s.instance()
 	free_key_if_not_spawn(current_scene)
 	
-	
 	#Set up the new scene
-	current_scene.scene_name = next_sc_name
 	current_scene.set_up(values, pos)
 	
 	

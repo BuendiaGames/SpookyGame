@@ -1,16 +1,16 @@
 extends Node2D
 
-var scene_name = null #Name of this scene
-
 func _ready():
-	pass # Replace with function body.
+	print("LEVEL READY" )
 
 func set_up(values, pos):
 	$Girl.position = pos
 	$Girl.stamina = values["stamina"]
 	$Girl.has_key = values["has_key"]
 	
-	camera_limits(scene_name)
+	print(name)
+	
+	camera_limits(name)
 
 #Set adequate camera limits depending on the level
 func camera_limits(level_name):

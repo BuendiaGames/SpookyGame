@@ -11,4 +11,5 @@ func _ready():
 
 #Make the teleportation effective
 func _on_teleporter_body_entered(body):
-	controller.goto_scene(scene_name, teleport_place)
+	if body.name == "Girl":
+		controller.goto_scene(scene_name, teleport_place)
