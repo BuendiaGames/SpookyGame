@@ -113,6 +113,7 @@ func _on_check_area_exited(area):
 #Caught by monsters
 func caught():
 	print("AAAAAAAAAAA")
+	fade_out()
 
 # ----------- Auxiliary stuff -----------#
 
@@ -129,4 +130,8 @@ func camera_lim(left, top, right, down):
 	$camera.limit_bottom = down
 	$camera.limit_top = top
 
-
+#fade out
+func fade_out():
+	$rectangle/AnimationPlayer.play("modulate")
+	get_node("../GUILayer/GUI").queue_free()
+	#$rectangle/AnimationPlayer.play_backwards("modulate")

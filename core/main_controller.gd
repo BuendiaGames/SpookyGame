@@ -23,7 +23,7 @@ func choose_scene_spawner():
 	elif (rand_num <= 0.4):
 		key_spawner = "graveyard"
 	elif (rand_num <= 0.6):
-		key_spawner = "torre_p1" # FIXME Poner nombre de escena
+		key_spawner = "torre_p1"
 	elif (rand_num <= 0.8):
 		key_spawner = "boatplace"
 	else:
@@ -84,6 +84,10 @@ func _deferred_goto_scene(path, pos):
 	# Instance the new scene, save it
 	current_scene = s.instance()
 	free_key_if_not_spawn(current_scene)
+	
+	# See if you won the game
+	if (current_scene.name == "starthall" and $Girl.has_key()):
+		$Girl.fade_out()
 	
 	#Set up the new scene
 	current_scene.set_up(values, pos)

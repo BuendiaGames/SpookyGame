@@ -11,6 +11,9 @@ func set_up(values, pos):
 	print(name)
 	
 	camera_limits(name)
+	
+	if (name == "starthall" and $Girl.has_key()):
+		$Girl.fade_out()
 
 #Set adequate camera limits depending on the level
 func camera_limits(level_name):

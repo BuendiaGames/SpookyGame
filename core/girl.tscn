@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://core/girl.gd" type="Script" id=1]
 [ext_resource path="res://graphics/girl.png" type="Texture" id=2]
 [ext_resource path="res://core/shaders/fog.shader" type="Shader" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://graphics/fade/rectangulonegro.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 13.7813 )
@@ -159,6 +160,22 @@ shader_param/selectable_color = Color( 0.57501, 0.391388, 0.742188, 1 )
 shader_param/color = Vector3( 0.54, 0.63, 0.52 )
 shader_param/OCTAVES = 2
 
+[sub_resource type="Animation" id=8]
+resource_name = "modulate"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="Girl" type="KinematicBody2D" groups=[
 "player",
 ]]
@@ -210,5 +227,14 @@ scale = Vector2( 16, 10 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 128, 128 )
+
+[node name="rectangle" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 3.2422, 3.69261 )
+scale = Vector2( 1.67376, 1.2221 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="rectangle"]
+anims/modulate = SubResource( 8 )
 [connection signal="area_entered" from="check" to="." method="_on_check_area_entered"]
 [connection signal="area_exited" from="check" to="." method="_on_check_area_exited"]
