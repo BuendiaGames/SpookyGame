@@ -4,7 +4,7 @@ var player = null #Player instance to take its data
 var current_scene = null
 var next_sc_name = null
 var lifebar = null
-var values = {"stamina":0.0, "has_key":false}
+var values = {"stamina":10.0, "has_key":false}
 var key_spawner = "pumpkin_place"
 
 
@@ -14,6 +14,7 @@ func _ready():
 	choose_scene_spawner()
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+
 
 # ---------------- Key spawn ---------------------- #
 func choose_scene_spawner():
@@ -64,12 +65,16 @@ func goto_scene(scene_name, pos):
 	var path = "levels/" + scene_name + ".tscn"
 	call_deferred("_deferred_goto_scene", path, pos)
 
+func currentlevel():
+	return current_scene.name
+
 
 func _deferred_goto_scene(path, pos):
 	
 	#Save all our values
-	values["stamina"] = player.stamina
-	values["has_key"] = player.has_key
+	if player != null:
+		values["stamina"] = player.stamina
+		values["has_key"] = player.has_key
 	
 	print(path)
 	
@@ -86,8 +91,6 @@ func _deferred_goto_scene(path, pos):
 	free_key_if_not_spawn(current_scene)
 	
 	# See if you won the game
-	if (current_scene.name == "starthall" and $Girl.has_key()):
-		$Girl.fade_out()
 	
 	#Set up the new scene
 	current_scene.set_up(values, pos)

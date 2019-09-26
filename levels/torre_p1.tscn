@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://graphics/tiles/tileset_prueba.tres" type="TileSet" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://core/girl.tscn" type="PackedScene" id=4]
 [ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=5]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=7]
-[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://core/fin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60, 270 )
@@ -45,18 +46,20 @@ format = 1
 tile_data = PoolIntArray( -393182, 8, 0, 1376289, 6, 0 )
 
 [node name="GUILayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="GUI" parent="GUILayer" instance=ExtResource( 6 )]
 
+[node name="menu" parent="GUILayer" instance=ExtResource( 7 )]
+visible = false
+
 [node name="ghosts" type="Node2D" parent="."]
 
-[node name="Area2D" parent="." instance=ExtResource( 7 )]
+[node name="Area2D" parent="." instance=ExtResource( 8 )]
 position = Vector2( 404.635, 171.557 )
 
 [node name="teleport" type="Node2D" parent="."]
 
-[node name="teleporter" parent="teleport" instance=ExtResource( 8 )]
+[node name="teleporter" parent="teleport" instance=ExtResource( 9 )]
 position = Vector2( 303.637, 534.174 )
 scale = Vector2( 2.68, 0.44 )
 scene_name = "torre_base"

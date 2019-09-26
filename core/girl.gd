@@ -22,6 +22,7 @@ var collider = null #Who I am detecting to interact with
 
 #Controls key possesion
 var has_key = false
+var finished = false
 
 
 # ----------- Main logic --------------- #
@@ -41,9 +42,13 @@ func _process(delta):
 	
 	
 	move_and_collide(current_speed * vel)
+
 	
-	if (has_key):
+
+	if (has_key and maincontroller.currentlevel() == "starthall" and not finished):
 		print("YASSSSS QUEEEN")
+		fade_out()
+		finished = true
 
 
 # ----------- Core functions --------- #
@@ -133,5 +138,7 @@ func camera_lim(left, top, right, down):
 #fade out
 func fade_out():
 	$rectangle/AnimationPlayer.play("modulate")
-	get_node("../GUILayer/GUI").queue_free()
-	#$rectangle/AnimationPlayer.play_backwards("modulate")
+	get_node("../GUILayer/GUI").hide()
+	
+func menu_fin():
+	get_node("../GUILayer/menu").show()

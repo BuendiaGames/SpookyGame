@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=2]
@@ -6,9 +6,11 @@
 [ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=4]
 [ext_resource path="res://core/girl.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://core/ghost.tscn" type="PackedScene" id=7]
-[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=8]
-[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://core/fin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://core/ghost.tscn" type="PackedScene" id=8]
+[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=9]
+[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=10]
+[ext_resource path="res://core/key.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 120, 70 )
@@ -46,59 +48,62 @@ position = Vector2( -212.399, -144.042 )
 
 [node name="GUI" parent="GUILayer" instance=ExtResource( 6 )]
 
+[node name="menu" parent="GUILayer" instance=ExtResource( 7 )]
+visible = false
+
 [node name="ghosts" type="Node2D" parent="."]
 
-[node name="ghost" parent="ghosts" instance=ExtResource( 7 )]
+[node name="ghost" parent="ghosts" instance=ExtResource( 8 )]
 position = Vector2( -43.8849, -218.281 )
 
-[node name="ghost2" parent="ghosts" instance=ExtResource( 7 )]
+[node name="ghost2" parent="ghosts" instance=ExtResource( 8 )]
 position = Vector2( 1067.61, 582.01 )
 
-[node name="ghost3" parent="ghosts" instance=ExtResource( 7 )]
+[node name="ghost3" parent="ghosts" instance=ExtResource( 8 )]
 position = Vector2( 27.5345, 654.802 )
 
-[node name="ghost4" parent="ghosts" instance=ExtResource( 7 )]
+[node name="ghost4" parent="ghosts" instance=ExtResource( 8 )]
 position = Vector2( 432.065, 310.117 )
 tipo = 1
 
-[node name="ghost5" parent="ghosts" instance=ExtResource( 7 )]
+[node name="ghost5" parent="ghosts" instance=ExtResource( 8 )]
 position = Vector2( 880, 120 )
 tipo = 2
 
-[node name="ghost6" parent="ghosts" instance=ExtResource( 7 )]
+[node name="ghost6" parent="ghosts" instance=ExtResource( 8 )]
 position = Vector2( 245.329, 160.084 )
 tipo = 3
 
-[node name="Area2D" parent="." instance=ExtResource( 8 )]
+[node name="Area2D" parent="." instance=ExtResource( 9 )]
 position = Vector2( 404.635, 171.557 )
 
 [node name="teleport" type="Node2D" parent="."]
 
-[node name="teleporter" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter" parent="teleport" instance=ExtResource( 10 )]
 position = Vector2( -280, -140 )
 scale = Vector2( 1, 3.8 )
 scene_name = "pumpkin_place"
 teleport_place = Vector2( 675, 800 )
 
-[node name="teleporter2" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter2" parent="teleport" instance=ExtResource( 10 )]
 position = Vector2( 494.896, -281.678 )
 scale = Vector2( 0.611605, 0.279991 )
 scene_name = "starthall"
 teleport_place = Vector2( 350, 30 )
 
-[node name="teleporter3" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter3" parent="teleport" instance=ExtResource( 10 )]
 position = Vector2( 1236.05, 593.572 )
 scale = Vector2( 1, 3.8 )
 scene_name = "torre_entrada"
 teleport_place = Vector2( 63, 335 )
 
-[node name="teleporter4" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter4" parent="teleport" instance=ExtResource( 10 )]
 position = Vector2( 907.27, -344.822 )
 scale = Vector2( 5.40791, 1.94936 )
 scene_name = "boatplace"
 teleport_place = Vector2( 462, 811 )
 
-[node name="teleporter5" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter5" parent="teleport" instance=ExtResource( 10 )]
 position = Vector2( -269.917, 413.25 )
 scale = Vector2( -1.4403, 10.6741 )
 scene_name = "cave"
@@ -112,3 +117,6 @@ editor/display_folded = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colision/collider"]
 position = Vector2( 497.365, -358.419 )
 shape = SubResource( 1 )
+
+[node name="key" parent="." instance=ExtResource( 11 )]
+position = Vector2( 478.365, -226.819 )

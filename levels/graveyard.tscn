@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/tiles/tileset_prueba.tres" type="TileSet" id=2]
 [ext_resource path="res://core/girl.tscn" type="PackedScene" id=3]
 [ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=4]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://core/ghost.tscn" type="PackedScene" id=6]
-[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=7]
-[ext_resource path="res://core/key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://core/fin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://core/ghost.tscn" type="PackedScene" id=7]
+[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://core/key.tscn" type="PackedScene" id=9]
 
 [node name="level" type="Node2D"]
 
@@ -42,62 +43,65 @@ tile_data = PoolIntArray( -458758, 9, 0, -458755, 9, 0, -524288, 9, 0, -524285, 
 
 [node name="GUI" parent="GUILayer" instance=ExtResource( 5 )]
 
+[node name="menu" parent="GUILayer" instance=ExtResource( 6 )]
+visible = false
+
 [node name="ghosts" type="Node2D" parent="."]
 
-[node name="ghost" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( 705.62, -204.126 )
 
-[node name="ghost2" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost2" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( -84.2784, -181.26 )
 
-[node name="ghost3" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost3" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( 954.553, -29.7459 )
 tipo = 2
 
-[node name="ghost4" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost4" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( -89.3372, 182.479 )
 tipo = 2
 
-[node name="ghost6" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost6" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( 297.786, 329.123 )
 
-[node name="ghost8" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost8" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( 969.217, 462.348 )
 
-[node name="ghost9" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost9" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( -65.0712, 684.959 )
 tipo = 2
 
-[node name="ghost11" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost11" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( 493.171, 732.906 )
 tipo = 1
 
-[node name="ghost12" parent="ghosts" instance=ExtResource( 6 )]
+[node name="ghost12" parent="ghosts" instance=ExtResource( 7 )]
 position = Vector2( 369.707, -50.8582 )
 tipo = 2
 
 [node name="caramelos" type="Node2D" parent="."]
 
-[node name="Area2D" parent="caramelos" instance=ExtResource( 7 )]
+[node name="Area2D" parent="caramelos" instance=ExtResource( 8 )]
 position = Vector2( 798.487, 106.486 )
 
-[node name="Area2D2" parent="caramelos" instance=ExtResource( 7 )]
+[node name="Area2D2" parent="caramelos" instance=ExtResource( 8 )]
 position = Vector2( -113.018, 301.382 )
 
-[node name="Area2D3" parent="caramelos" instance=ExtResource( 7 )]
+[node name="Area2D3" parent="caramelos" instance=ExtResource( 8 )]
 position = Vector2( -133.567, -184.939 )
 
-[node name="Area2D4" parent="caramelos" instance=ExtResource( 7 )]
+[node name="Area2D4" parent="caramelos" instance=ExtResource( 8 )]
 position = Vector2( 510.295, 400.701 )
 
-[node name="Area2D6" parent="caramelos" instance=ExtResource( 7 )]
+[node name="Area2D6" parent="caramelos" instance=ExtResource( 8 )]
 position = Vector2( 901.818, 675.158 )
 
-[node name="Area2D5" parent="caramelos" instance=ExtResource( 7 )]
+[node name="Area2D5" parent="caramelos" instance=ExtResource( 8 )]
 position = Vector2( -136.992, 791.128 )
 
-[node name="Area2D7" parent="caramelos" instance=ExtResource( 7 )]
+[node name="Area2D7" parent="caramelos" instance=ExtResource( 8 )]
 position = Vector2( 522.058, 609.142 )
 
-[node name="key" parent="." instance=ExtResource( 8 )]
+[node name="key" parent="." instance=ExtResource( 9 )]
 position = Vector2( 472.788, 748.728 )
