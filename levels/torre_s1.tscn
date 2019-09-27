@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=2]
@@ -9,8 +9,9 @@
 [ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=7]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://core/fin.tscn" type="PackedScene" id=9]
-[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=10]
+[ext_resource path="res://core/ghost.tscn" type="PackedScene" id=10]
 [ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 3 )
@@ -79,8 +80,15 @@ visible = false
 
 [node name="ghosts" type="Node2D" parent="."]
 
-[node name="Area2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 404.635, 171.557 )
+[node name="ghost" parent="ghosts" instance=ExtResource( 10 )]
+position = Vector2( 320.001, 174.737 )
+tipo = 2
+
+[node name="ghost2" parent="ghosts" instance=ExtResource( 10 )]
+position = Vector2( 35.7896, 212.632 )
+
+[node name="ghost3" parent="ghosts" instance=ExtResource( 10 )]
+position = Vector2( 600.001, 172.632 )
 
 [node name="teleport" type="Node2D" parent="."]
 editor/display_folded = true
@@ -179,3 +187,11 @@ position = Vector2( 511.283, 32.3453 )
 
 [node name="shape" type="CollisionShape2D" parent="colision/collider12"]
 shape = SubResource( 6 )
+
+[node name="sweets" type="Node2D" parent="."]
+
+[node name="Area2D" parent="sweets" instance=ExtResource( 12 )]
+position = Vector2( 383.582, 371.557 )
+
+[node name="Area2D2" parent="sweets" instance=ExtResource( 12 )]
+position = Vector2( 82.5291, 87.3463 )
