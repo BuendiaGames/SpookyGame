@@ -1,19 +1,21 @@
 extends Node2D
 
 func _ready():
-	print("LEVEL READY" )
+	var map_viewer_pckg = preload("res://core/map_viewer.tscn")
+	var map_viewer = map_viewer_pckg.instance()
+	map_viewer.hide()
+	$GUILayer.add_child(map_viewer)
 
 func set_up(values, pos):
 	$Girl.position = pos
 	$Girl.stamina = values["stamina"]
 	$Girl.has_key = values["has_key"]
 	
-	print(name)
-	
-	camera_limits(name)
+	camera_limits()
 
 #Set adequate camera limits depending on the level
-func camera_limits(level_name):
+func camera_limits():
+	var level_name =  main_controller.currentlevel()
 	match level_name:
 		"torre_base", "torre_p1", "torre_s1":
 			$Girl.camera_lim(-224,-192,800,576)

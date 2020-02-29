@@ -39,6 +39,7 @@ func _process(delta):
 	
 	move_input(delta) #Make the movement
 	interact() #Possible interact with things
+	open_map() #Possibility to open the map
 	
 	
 	move_and_collide(current_speed * vel)
@@ -93,6 +94,10 @@ func interact():
 			print("Estoy interaccionando")
 		else:
 			print("Nada por aqui")
+
+func open_map():
+	if Input.is_action_just_pressed("Map"):
+		get_node("../GUILayer/map_viewer").open_map()
 
 #Recovers a bit of stamina
 func recover_stamina(sta):

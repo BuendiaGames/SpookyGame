@@ -2,6 +2,7 @@ extends Node
 
 var player = null #Player instance to take its data
 var current_scene = null
+var scenename = "" #String to identify the current level
 var next_sc_name = null
 var lifebar = null
 var values = {"stamina":10.0, "has_key":false}
@@ -33,11 +34,11 @@ func choose_scene_spawner():
 	print(key_spawner)
 
 #Delete the key if this was not the chosen zone
-func free_key_if_not_spawn(currentscene):
-	if (currentscene.name != key_spawner):
+func free_key_if_not_spawn():
+	if (currentlevel() != key_spawner):
 		if current_scene.has_node("key"):
 			current_scene.get_node("key").queue_free()
-			print("LLAVE ELIMINADA")
+			print("LLAVE ELIMINADA " + currentlevel())
 
 # --------------- Player Management --------------- #
 
@@ -62,11 +63,13 @@ func update_bar(value):
 
 func goto_scene(scene_name, pos):
 	next_sc_name = scene_name
+	scenename = scene_name
 	var path = "levels/" + scene_name + ".tscn"
 	call_deferred("_deferred_goto_scene", path, pos)
 
+
 func currentlevel():
-	return current_scene.name
+	return scenename
 
 
 func _deferred_goto_scene(path, pos):
@@ -88,13 +91,12 @@ func _deferred_goto_scene(path, pos):
 	
 	# Instance the new scene, save it
 	current_scene = s.instance()
-	free_key_if_not_spawn(current_scene)
+	free_key_if_not_spawn()
 	
 	# See if you won the game
 	
 	#Set up the new scene
 	current_scene.set_up(values, pos)
-	
 	
 	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)

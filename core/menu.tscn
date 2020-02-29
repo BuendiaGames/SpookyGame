@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://core/menu.gd" type="Script" id=1]
 [ext_resource path="res://graphics/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://graphics/map/mapajuegodef.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "load_anim"
@@ -129,7 +128,7 @@ custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Take the adventure!"
 
-[node name="wiki" type="Button" parent="background/center/container" groups=[
+[node name="exit" type="Button" parent="background/center/container" groups=[
 "mbutton",
 ]]
 margin_top = 147.0
@@ -140,41 +139,6 @@ custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "Ghosts? What?"
-
-[node name="map" type="Button" parent="background/center/container" groups=[
-"mbutton",
-]]
-margin_top = 218.0
-margin_right = 568.0
-margin_bottom = 259.0
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "Where am I?"
-
-[node name="exit" type="Button" parent="background/center/container" groups=[
-"mbutton",
-]]
-margin_top = 289.0
-margin_right = 568.0
-margin_bottom = 330.0
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Better leave it..."
-
-[node name="map" type="Sprite" parent="."]
-visible = false
-position = Vector2( 200, -60 )
-scale = Vector2( 0.4, 0.35 )
-texture = ExtResource( 3 )
-centered = false
 [connection signal="pressed" from="background/center/container/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="background/center/container/wiki" to="." method="_on_wiki_pressed"]
-[connection signal="pressed" from="background/center/container/map" to="." method="_on_map_pressed"]
 [connection signal="pressed" from="background/center/container/exit" to="." method="_on_exit_pressed"]
