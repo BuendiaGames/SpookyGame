@@ -54,7 +54,7 @@ visible = false
 [node name="ghosts" type="Node2D" parent="."]
 
 [node name="ghost" parent="ghosts" instance=ExtResource( 8 )]
-position = Vector2( -43.8849, -218.281 )
+position = Vector2( 212.974, -129.237 )
 
 [node name="ghost2" parent="ghosts" instance=ExtResource( 8 )]
 position = Vector2( 1067.61, 582.01 )
@@ -109,6 +109,12 @@ scale = Vector2( -1.4403, 10.6741 )
 scene_name = "cave"
 teleport_place = Vector2( 1150, 280 )
 
+[node name="teleporter6" parent="teleport" instance=ExtResource( 10 )]
+position = Vector2( 1243.84, 43.3731 )
+scale = Vector2( -1.4403, 10.6741 )
+scene_name = "graveyard"
+teleport_place = Vector2( 475, -270 )
+
 [node name="colision" type="Node2D" parent="."]
 editor/display_folded = true
 
@@ -119,4 +125,5 @@ position = Vector2( 497.365, -358.419 )
 shape = SubResource( 1 )
 
 [node name="key" parent="." instance=ExtResource( 11 )]
+visible = false
 position = Vector2( 478.365, -226.819 )

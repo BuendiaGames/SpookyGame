@@ -3,11 +3,11 @@
 [ext_resource path="res://core/fin.gd" type="Script" id=1]
 [ext_resource path="res://graphics/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 30
 font_data = ExtResource( 2 )
 
@@ -20,7 +20,7 @@ margin_left = 160.0
 margin_top = 70.0
 margin_right = 916.0
 margin_bottom = 116.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "The door is closed, I cannot return..."
 align = 1
 valign = 1
@@ -44,7 +44,7 @@ custom_constants/separation = 30
 ]]
 margin_right = 568.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "The end"
 align = 1
 valign = 1
@@ -52,10 +52,11 @@ valign = 1
 [node name="start" type="Button" parent="center/container" groups=[
 "mbutton",
 ]]
+visible = false
 margin_top = 76.0
 margin_right = 568.0
 margin_bottom = 117.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -65,10 +66,10 @@ text = "Start again!"
 [node name="exit" type="Button" parent="center/container" groups=[
 "mbutton",
 ]]
-margin_top = 147.0
+margin_top = 76.0
 margin_right = 568.0
-margin_bottom = 188.0
-custom_fonts/font = SubResource( 4 )
+margin_bottom = 117.0
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )

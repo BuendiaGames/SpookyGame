@@ -49,6 +49,7 @@ tile_data = PoolIntArray( -393182, 8, 0, 851969, 4, 0, 851986, 4, 0, 1376289, 6,
 [node name="GUI" parent="GUILayer" instance=ExtResource( 5 )]
 
 [node name="menu" parent="GUILayer" instance=ExtResource( 6 )]
+visible = false
 
 [node name="ghosts" type="Node2D" parent="."]
 

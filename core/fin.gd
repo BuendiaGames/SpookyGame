@@ -23,7 +23,7 @@ func finish_intro():
 
 #Button actions
 func _on_start_pressed():
-	controller.goto_scene("forest", Vector2(-212, -144))
+	controller.goto_scene("menu", Vector2(-212, -144))
 
 func _on_exit_pressed():
 	get_tree().quit()

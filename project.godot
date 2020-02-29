@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Spooky"
-run/main_scene="res://levels/forest.tscn"
+run/main_scene="res://core/menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
