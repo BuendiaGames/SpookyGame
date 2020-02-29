@@ -25,6 +25,7 @@ tracks/0/keys = {
 radius = 15.0
 
 [node name="ghost" type="Sprite"]
+z_index = 1
 texture = ExtResource( 1 )
 hframes = 4
 frame = 2

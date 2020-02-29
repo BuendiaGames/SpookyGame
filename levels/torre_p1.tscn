@@ -3,8 +3,8 @@
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://graphics/tiles/tileset_prueba.tres" type="TileSet" id=2]
 [ext_resource path="res://core/key.tscn" type="PackedScene" id=3]
-[ext_resource path="res://core/girl.tscn" type="PackedScene" id=4]
-[ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=5]
+[ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=4]
+[ext_resource path="res://core/girl.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://core/fin.tscn" type="PackedScene" id=7]
 [ext_resource path="res://core/ghost.tscn" type="PackedScene" id=8]
@@ -36,15 +36,15 @@ tile_data = PoolIntArray( -458759, 16, 0, -458758, 16, 0, -458757, 16, 0, -45875
 [node name="key" parent="." instance=ExtResource( 3 )]
 position = Vector2( 322.646, -35.604 )
 
-[node name="Girl" parent="." instance=ExtResource( 4 )]
-position = Vector2( 306.293, 361.28 )
-
 [node name="deco" type="TileMap" parent="."]
-tile_set = ExtResource( 5 )
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 32
 format = 1
 tile_data = PoolIntArray( -393182, 8, 0, 1376289, 6, 0 )
+
+[node name="Girl" parent="." instance=ExtResource( 5 )]
+position = Vector2( 306.293, 361.28 )
 
 [node name="GUILayer" type="CanvasLayer" parent="."]
 

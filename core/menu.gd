@@ -3,8 +3,6 @@ extends Node2D
 #Instance of the main controller
 var controller
 
-
-
 func _ready():
 	controller = get_node("/root/main_controller")
 	set_process(false)
