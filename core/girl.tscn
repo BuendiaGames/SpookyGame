@@ -228,6 +228,7 @@ position = Vector2( 7.62939e-06, -23.1898 )
 shape = SubResource( 6 )
 
 [node name="fog" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 layer = 1
 scroll_ignore_camera_zoom = true
 
