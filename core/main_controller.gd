@@ -38,7 +38,23 @@ func free_key_if_not_spawn():
 	if (currentlevel() != key_spawner):
 		if current_scene.has_node("key"):
 			current_scene.get_node("key").queue_free()
-			print("LLAVE ELIMINADA " + currentlevel())
+			#print("LLAVE ELIMINADA " + currentlevel())
+
+func the_hint():
+	var hint = ""
+	match key_spawner:
+		"cave":
+			hint = "Where the sunlight does not reach, \r\nbut water found its way,\r\nyou should find your key"
+		"graveyard":
+			hint = "Just keep going around,\r\n not really far away,\r\nthere two trees and treasure\r\nto be found"
+		"torre_p1":
+			hint = "Big and magnificient,\r\nthe tower shows itself.\r\nAt the top of the castle you'll find\r\n your reward"
+		"boatplace":
+			hint = "At the edge of the sea,\r\nthere's the key"
+		"pumpkin_place":
+			hint = "Is it already Halloween? \r\nThe decoration says so,\r\nfind the pumpkins,\r\nthen travel north"
+	return hint
+
 
 # --------------- Player Management --------------- #
 
@@ -79,7 +95,6 @@ func _deferred_goto_scene(path, pos):
 		values["stamina"] = player.stamina
 		values["has_key"] = player.has_key
 	
-	print(path)
 	
 	# It is now safe to remove the current scene
 	current_scene.free()
@@ -87,7 +102,6 @@ func _deferred_goto_scene(path, pos):
 	# Load the new scene.
 	var s = ResourceLoader.load(path)
 	
-	print(s)
 	
 	# Instance the new scene, save it
 	current_scene = s.instance()
@@ -96,6 +110,7 @@ func _deferred_goto_scene(path, pos):
 	# See if you won the game
 	
 	#Set up the new scene
+	current_scene.levelname = currentlevel()
 	current_scene.set_up(values, pos)
 	
 	# Add it to the active scene, as child of root.

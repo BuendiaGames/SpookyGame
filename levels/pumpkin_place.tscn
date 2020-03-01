@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://core/sweet.tscn" type="PackedScene" id=9]
 [ext_resource path="res://core/key.tscn" type="PackedScene" id=10]
 [ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://core/textarea.tscn" type="PackedScene" id=12]
 
 [node name="level" type="Node2D"]
 script = ExtResource( 1 )
@@ -111,3 +112,11 @@ position = Vector2( 676.758, 887.659 )
 scale = Vector2( 3.91197, 1.35143 )
 scene_name = "forest"
 teleport_place = Vector2( -260, -140 )
+
+[node name="text" type="Node2D" parent="."]
+
+[node name="textarea" parent="text" instance=ExtResource( 12 )]
+position = Vector2( -142.273, 144.473 )
+text = "Shhhhh! They don't know I'm hidden here!
+Go out! Leave me alone!
+"

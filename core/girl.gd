@@ -91,13 +91,13 @@ func move_input(delta):
 func interact():
 	if Input.is_action_just_pressed("interact"):
 		if collider != null:
-			print("Estoy interaccionando")
-		else:
-			print("Nada por aqui")
+			if collider.is_in_group("interactables"):
+				get_node("../GUILayer/dialogbox").open_dialogue(collider.text)
 
 func open_map():
 	if Input.is_action_just_pressed("Map"):
 		get_node("../GUILayer/map_viewer").open_map()
+
 
 #Recovers a bit of stamina
 func recover_stamina(sta):
@@ -118,6 +118,12 @@ func _on_check_area_entered(area):
 	collider = area
 
 func _on_check_area_exited(area):
+	collider = null
+
+func _on_check_body_entered(body):
+	collider = body
+
+func _on_check_body_exited(body):
 	collider = null
 
 #Caught by monsters
@@ -147,3 +153,6 @@ func fade_out():
 	
 func menu_fin():
 	get_node("../GUILayer/menu").show()
+
+
+

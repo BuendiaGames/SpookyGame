@@ -252,3 +252,5 @@ texture = ExtResource( 5 )
 anims/modulate = SubResource( 8 )
 [connection signal="area_entered" from="check" to="." method="_on_check_area_entered"]
 [connection signal="area_exited" from="check" to="." method="_on_check_area_exited"]
+[connection signal="body_entered" from="check" to="." method="_on_check_body_entered"]
+[connection signal="body_exited" from="check" to="." method="_on_check_body_exited"]

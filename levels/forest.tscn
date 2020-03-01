@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=2]
@@ -10,7 +10,8 @@
 [ext_resource path="res://core/ghost.tscn" type="PackedScene" id=8]
 [ext_resource path="res://core/sweet.tscn" type="PackedScene" id=9]
 [ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=10]
-[ext_resource path="res://core/key.tscn" type="PackedScene" id=11]
+[ext_resource path="res://core/textarea.tscn" type="PackedScene" id=11]
+[ext_resource path="res://core/key.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 120, 70 )
@@ -124,6 +125,14 @@ editor/display_folded = true
 position = Vector2( 497.365, -358.419 )
 shape = SubResource( 1 )
 
-[node name="key" parent="." instance=ExtResource( 11 )]
+[node name="text" type="Node2D" parent="."]
+
+[node name="textarea" parent="text" instance=ExtResource( 11 )]
+position = Vector2( 784.474, 463.582 )
+text = "The ghost... It caught me...
+The graveyard... Help... 
+In the graveyard... To the east..."
+
+[node name="key" parent="." instance=ExtResource( 12 )]
 visible = false
 position = Vector2( 478.365, -226.819 )

@@ -29,7 +29,7 @@ func set_icon_loc():
 	
 	#The tower has many scenes refering to same map location.
 	#So treat it separately
-	if "tower" in currentscene:
+	if "torre" in currentscene:
 		$player_icon.position = tower_icon
 	else:
 		$player_icon.position = locations[currentscene]
@@ -39,8 +39,6 @@ func set_icon_loc():
 #Character blinking!
 func _process(delta):
 	elapsed_time += delta
-	
-	print(elapsed_time)
 	
 	if elapsed_time >= blink_time:
 		elapsed_time = 0.0
