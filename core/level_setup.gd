@@ -24,6 +24,7 @@ func set_up(values, pos):
 	
 	camera_limits()
 	set_hint()
+	add_last_death_places()
 
 #For the graveyard, set the hidden hint that depends on key location
 func set_hint():
@@ -39,3 +40,19 @@ func camera_limits():
 			$Girl.camera_lim(0,-288,1056,576)
 		_:
 			$Girl.camera_lim(-288,-352,1216,864)
+
+func add_last_death_places():
+	
+	var death_level = ""
+	var gravescene = preload("res://core/grave.tscn")
+	var grave = null
+	
+	for dpos in main_controller.death_positions:
+		
+		death_level = dpos[0]
+		
+		if death_level == levelname:
+			grave = gravescene.instance()
+			grave.position = dpos[1]
+			add_child(grave)
+	

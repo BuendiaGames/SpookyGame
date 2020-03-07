@@ -8,6 +8,8 @@ var lifebar = null
 var values = {"stamina":10.0, "has_key":false} #Player vars
 var key_spawner = "pumpkin_place" #Where will the key appear
 
+var death_positions = []
+
 
 #Get player, GUI and and scene
 func _ready():
@@ -62,6 +64,11 @@ func init_player(p):
 	player = p
 	init_bar()
 
+func add_death_position(pos):
+	death_positions.append(pos)
+	print(death_positions)
+
+
 # --------------- Lifebar controller -------------- #
 
 #Configure lifebar
@@ -81,14 +88,21 @@ func goto_scene(scene_name, pos):
 	next_sc_name = scene_name
 	scenename = scene_name
 	var path = "levels/" + scene_name + ".tscn"
-	call_deferred("_deferred_goto_scene", path, pos)
+	call_deferred("_deferred_load_level", path, pos)
+
+func restart_game():
+	player=null
+	next_sc_name = null
+	scenename = ""
+	values = {"stamina":10.0, "has_key":false} #Player vars
+	call_deferred("_deferred_load_menu")
 
 
 func currentlevel():
 	return scenename
 
 
-func _deferred_goto_scene(path, pos):
+func _deferred_load_level(path, pos):
 	
 	#Save all our values
 	if player != null:
@@ -112,6 +126,20 @@ func _deferred_goto_scene(path, pos):
 	#Set up the new scene
 	current_scene.levelname = currentlevel()
 	current_scene.set_up(values, pos)
+	
+	# Add it to the active scene, as child of root.
+	get_tree().get_root().add_child(current_scene)
+	
+	# Optionally, to make it compatible with the SceneTree.change_scene() API.
+	get_tree().set_current_scene(current_scene)
+
+func _deferred_load_menu():
+	
+	current_scene.free()
+	var s = ResourceLoader.load("res://core/menu.tscn")
+	
+	# Instance the new scene, save it
+	current_scene = s.instance()
 	
 	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)

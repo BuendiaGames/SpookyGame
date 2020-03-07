@@ -52,7 +52,6 @@ valign = 1
 [node name="start" type="Button" parent="center/container" groups=[
 "mbutton",
 ]]
-visible = false
 margin_top = 76.0
 margin_right = 568.0
 margin_bottom = 117.0
@@ -66,9 +65,9 @@ text = "Start again!"
 [node name="exit" type="Button" parent="center/container" groups=[
 "mbutton",
 ]]
-margin_top = 76.0
+margin_top = 147.0
 margin_right = 568.0
-margin_bottom = 117.0
+margin_bottom = 188.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )

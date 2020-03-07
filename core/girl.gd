@@ -126,9 +126,9 @@ func _on_check_body_entered(body):
 func _on_check_body_exited(body):
 	collider = null
 
-#Caught by monsters
+#Caught by monsters: save the place where I died and fade out
 func caught():
-	print("AAAAAAAAAAA")
+	main_controller.add_death_position([main_controller.currentlevel(), position])
 	fade_out()
 
 # ----------- Auxiliary stuff -----------#

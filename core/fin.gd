@@ -1,10 +1,8 @@
 extends Node2D
 
-#Instance of the main controller
-var controller
+
 
 func _ready():
-	controller = get_node("/root/main_controller")
 	pass
 
 func _process(delta):
@@ -23,7 +21,7 @@ func finish_intro():
 
 #Button actions
 func _on_start_pressed():
-	controller.goto_scene("menu", Vector2(-212, -144))
+	main_controller.restart_game()
 
 func _on_exit_pressed():
 	get_tree().quit()
