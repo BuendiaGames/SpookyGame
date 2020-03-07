@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=2]
@@ -7,12 +7,13 @@
 [ext_resource path="res://graphics/tiles/tileset_prueba.tres" type="TileSet" id=5]
 [ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=6]
 [ext_resource path="res://core/girl.tscn" type="PackedScene" id=7]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=8]
-[ext_resource path="res://core/fin.tscn" type="PackedScene" id=9]
-[ext_resource path="res://core/ghost.tscn" type="PackedScene" id=10]
-[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=11]
-[ext_resource path="res://core/key.tscn" type="PackedScene" id=12]
-[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=13]
+[ext_resource path="res://core/camera_shader.tscn" type="PackedScene" id=8]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://core/fin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://core/ghost.tscn" type="PackedScene" id=11]
+[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=12]
+[ext_resource path="res://core/key.tscn" type="PackedScene" id=13]
+[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 3 )
@@ -60,59 +61,62 @@ position = Vector2( 461.376, 811.077 )
 
 [node name="GUILayer" type="CanvasLayer" parent="."]
 
-[node name="GUI" parent="GUILayer" instance=ExtResource( 8 )]
+[node name="camera_shader" parent="GUILayer" instance=ExtResource( 8 )]
+visible = true
 
-[node name="menu" parent="GUILayer" instance=ExtResource( 9 )]
+[node name="GUI" parent="GUILayer" instance=ExtResource( 9 )]
+
+[node name="menu" parent="GUILayer" instance=ExtResource( 10 )]
 visible = false
 
 [node name="ghosts" type="Node2D" parent="."]
 
-[node name="ghost" parent="ghosts" instance=ExtResource( 10 )]
+[node name="ghost" parent="ghosts" instance=ExtResource( 11 )]
 position = Vector2( 1049.63, 833.631 )
 
-[node name="ghost2" parent="ghosts" instance=ExtResource( 10 )]
+[node name="ghost2" parent="ghosts" instance=ExtResource( 11 )]
 position = Vector2( 820.544, 403.455 )
 tipo = 2
 
-[node name="ghost3" parent="ghosts" instance=ExtResource( 10 )]
+[node name="ghost3" parent="ghosts" instance=ExtResource( 11 )]
 position = Vector2( -96.5433, 623.817 )
 tipo = 1
 
-[node name="ghost4" parent="ghosts" instance=ExtResource( 10 )]
+[node name="ghost4" parent="ghosts" instance=ExtResource( 11 )]
 position = Vector2( -106.564, -48.412 )
 tipo = 1
 
-[node name="ghost5" parent="ghosts" instance=ExtResource( 10 )]
+[node name="ghost5" parent="ghosts" instance=ExtResource( 11 )]
 position = Vector2( 488.307, 206.265 )
 tipo = 2
 
-[node name="ghost6" parent="ghosts" instance=ExtResource( 10 )]
+[node name="ghost6" parent="ghosts" instance=ExtResource( 11 )]
 position = Vector2( -52.0569, 331.863 )
 tipo = 2
 
-[node name="ghost7" parent="ghosts" instance=ExtResource( 10 )]
+[node name="ghost7" parent="ghosts" instance=ExtResource( 11 )]
 position = Vector2( 336.906, 497.632 )
 
 [node name="caramelos" type="Node2D" parent="."]
 
-[node name="Area2D" parent="caramelos" instance=ExtResource( 11 )]
+[node name="Area2D" parent="caramelos" instance=ExtResource( 12 )]
 position = Vector2( 495.735, 70.6966 )
 
-[node name="Area2D2" parent="caramelos" instance=ExtResource( 11 )]
+[node name="Area2D2" parent="caramelos" instance=ExtResource( 12 )]
 position = Vector2( 1135.49, 579.134 )
 
-[node name="Area2D3" parent="caramelos" instance=ExtResource( 11 )]
+[node name="Area2D3" parent="caramelos" instance=ExtResource( 12 )]
 position = Vector2( -234.256, 549.852 )
 
-[node name="Area2D4" parent="caramelos" instance=ExtResource( 11 )]
+[node name="Area2D4" parent="caramelos" instance=ExtResource( 12 )]
 position = Vector2( 276.553, 374.16 )
 
-[node name="key" parent="." instance=ExtResource( 12 )]
+[node name="key" parent="." instance=ExtResource( 13 )]
 position = Vector2( 86.5915, -94.8996 )
 
 [node name="teleporters" type="Node2D" parent="."]
 
-[node name="teleporter" parent="teleporters" instance=ExtResource( 13 )]
+[node name="teleporter" parent="teleporters" instance=ExtResource( 14 )]
 position = Vector2( 461.03, 869.762 )
 scale = Vector2( 4.7847, 2.12004 )
 scene_name = "forest"

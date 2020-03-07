@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://core/level_setup.gd" type="Script" id=1]
 [ext_resource path="res://core/water.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/tiles/tileset_prueba.tres" type="TileSet" id=3]
 [ext_resource path="res://graphics/tiles/tileset_deco.tres" type="TileSet" id=4]
 [ext_resource path="res://core/girl.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://core/fin.tscn" type="PackedScene" id=7]
-[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=8]
-[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://core/camera_shader.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://core/fin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://core/sweet.tscn" type="PackedScene" id=9]
+[ext_resource path="res://core/teleporter.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60, 270 )
@@ -50,19 +51,21 @@ position = Vector2( 280, 210 )
 
 [node name="GUILayer" type="CanvasLayer" parent="."]
 
-[node name="GUI" parent="GUILayer" instance=ExtResource( 6 )]
+[node name="camera_shader" parent="GUILayer" instance=ExtResource( 6 )]
 
-[node name="menu" parent="GUILayer" instance=ExtResource( 7 )]
+[node name="GUI" parent="GUILayer" instance=ExtResource( 7 )]
+
+[node name="menu" parent="GUILayer" instance=ExtResource( 8 )]
 visible = false
 
 [node name="ghosts" type="Node2D" parent="."]
 
-[node name="Area2D" parent="." instance=ExtResource( 8 )]
+[node name="Area2D" parent="." instance=ExtResource( 9 )]
 position = Vector2( 404.635, 171.557 )
 
 [node name="teleport" type="Node2D" parent="."]
 
-[node name="teleporter" parent="teleport" instance=ExtResource( 9 )]
+[node name="teleporter" parent="teleport" instance=ExtResource( 10 )]
 position = Vector2( 304.088, 11.6796 )
 scale = Vector2( 1, 0.44 )
 scene_name = "forest"

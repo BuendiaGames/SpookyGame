@@ -1,12 +1,12 @@
 extends Node
 
 var player = null #Player instance to take its data
-var current_scene = null
+var current_scene = null #Which is the current scene
 var scenename = "" #String to identify the current level
 var next_sc_name = null
 var lifebar = null
-var values = {"stamina":10.0, "has_key":false}
-var key_spawner = "pumpkin_place"
+var values = {"stamina":10.0, "has_key":false} #Player vars
+var key_spawner = "pumpkin_place" #Where will the key appear
 
 
 #Get player, GUI and and scene

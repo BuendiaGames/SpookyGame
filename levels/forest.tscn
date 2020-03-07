@@ -49,6 +49,7 @@ position = Vector2( -212.399, -144.042 )
 [node name="GUILayer" type="CanvasLayer" parent="."]
 
 [node name="camera_shader" parent="GUILayer" instance=ExtResource( 6 )]
+visible = true
 
 [node name="GUI" parent="GUILayer" instance=ExtResource( 7 )]
 
