@@ -159,6 +159,7 @@ position = Vector2( 1137.68, 48.3407 )
 
 [node name="textarea68" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 1138.46, 337.854 )
+text = "She was a Bulbasur fan."
 
 [node name="textarea92" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 1137.53, 623.649 )
@@ -216,6 +217,7 @@ position = Vector2( 111.988, -144.81 )
 
 [node name="textarea28" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 111.651, 144.034 )
+text = "Ripperino in pepperoni"
 
 [node name="textarea59" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 112.434, 433.547 )
@@ -249,6 +251,9 @@ position = Vector2( 111.496, 622.843 )
 
 [node name="textarea16" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 945.017, -239.018 )
+text = "You thought this is a tombstone
+but it was me,
+Dio!"
 
 [node name="textarea33" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 944.681, 49.8253 )
@@ -309,12 +314,14 @@ position = Vector2( 849.511, 625.876 )
 
 [node name="textarea5" parent="text" instance=ExtResource( 12 )]
 position = Vector2( -79.4972, -144.068 )
+text = "Here lies my hopes and dreams."
 
 [node name="textarea41" parent="text" instance=ExtResource( 12 )]
 position = Vector2( -79.8338, 144.776 )
 
 [node name="textarea64" parent="text" instance=ExtResource( 12 )]
 position = Vector2( -79.0505, 434.289 )
+text = "Finally."
 
 [node name="textarea88" parent="text" instance=ExtResource( 12 )]
 position = Vector2( -79.9883, 720.085 )
@@ -342,6 +349,8 @@ position = Vector2( -79.0505, 337.789 )
 
 [node name="textarea82" parent="text" instance=ExtResource( 12 )]
 position = Vector2( -79.9883, 623.585 )
+text = "A tombstone fell over him.
+(It was not this one)."
 
 [node name="textarea14" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 753.533, -238.276 )
@@ -354,6 +363,8 @@ position = Vector2( 753.979, 340.081 )
 
 [node name="textarea75" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 753.041, 625.876 )
+text = "The Euler identity is written
+on this tombstone."
 
 [node name="textarea6" parent="text" instance=ExtResource( 12 )]
 position = Vector2( -175.967, -144.068 )
@@ -418,13 +429,13 @@ position = Vector2( 558.119, 719.641 )
 [node name="textarea101" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 464.354, 785.441 )
 text = "Here lies Mapachana.
-She did part of the art, coding and
+She did the world map, coding and
 level design."
 
 [node name="textarea102" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 497.254, 785.441 )
 text = "Here lies Victor7.
-He did part of the art, most of coding, and music."
+He did the sprite art, coding, and music. "
 
 [node name="hint_text" parent="text" instance=ExtResource( 12 )]
 position = Vector2( 465.112, 209.497 )
