@@ -15,12 +15,22 @@ func _ready():
 	dialogbox.hide()
 	$GUILayer.add_child(dialogbox)
 	
-	
+	if should_rain():
+		var rain = Particles2D.new()
+		rain.amount = 120
+		rain.lifetime = 3.5
+		rain.process_material = preload("res://core/shaders/particle_rain.tres")
+		rain.position = Vector2(570, -10)
+		rain.emitting = true
+		rain.texture = preload("res://graphics/trace_01.png")
+		$GUILayer.add_child(rain)
 
 func set_up(values, pos):
 	$Girl.position = pos
 	$Girl.stamina = values["stamina"]
 	$Girl.has_key = values["has_key"]
+	
+	#$Girl/camera/rain.emitting = should_rain()
 	
 	camera_limits()
 	set_hint()
@@ -40,6 +50,10 @@ func camera_limits():
 			$Girl.camera_lim(0,-288,1056,576)
 		_:
 			$Girl.camera_lim(-288,-352,1216,864)
+
+#Returns true in levels with rain
+func should_rain():
+	return not (levelname.find("torre") != -1 or levelname == "cave")
 
 func add_last_death_places():
 	

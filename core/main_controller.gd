@@ -108,6 +108,7 @@ func _deferred_load_level(path, pos):
 	if player != null:
 		values["stamina"] = player.stamina
 		values["has_key"] = player.has_key
+		
 	
 	
 	# It is now safe to remove the current scene
@@ -126,6 +127,11 @@ func _deferred_load_level(path, pos):
 	#Set up the new scene
 	current_scene.levelname = currentlevel()
 	current_scene.set_up(values, pos)
+	
+	if player != null:
+		#Rain on exteriors
+		if currentlevel():
+			player.get_node("camera/rain").emitting = true
 	
 	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)
