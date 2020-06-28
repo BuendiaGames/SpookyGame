@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://core/girl.gd" type="Script" id=1]
 [ext_resource path="res://graphics/girl.png" type="Texture" id=2]
 [ext_resource path="res://core/shaders/fog.shader" type="Shader" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://graphics/fade/rectangulonegro.png" type="Texture" id=5]
+[ext_resource path="res://music/sfx/footsteps.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 13.7813 )
@@ -160,7 +161,7 @@ shader_param/selectable_color = Color( 0.57501, 0.391388, 0.742188, 1 )
 shader_param/color = Vector3( 0.54, 0.63, 0.52 )
 shader_param/OCTAVES = 2
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 length = 1.7
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -220,7 +221,6 @@ limit_right = 1216
 limit_bottom = 864
 
 [node name="check" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7.62939e-06, -23.1898 )
 
 [node name="circle" type="CollisionShape2D" parent="check"]
@@ -248,7 +248,11 @@ scale = Vector2( 1.67376, 1.2221 )
 texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="rectangle"]
-anims/modulate = SubResource( 9 )
+anims/modulate = SubResource( 8 )
+
+[node name="footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -13.0
 [connection signal="area_entered" from="check" to="." method="_on_check_area_entered"]
 [connection signal="area_exited" from="check" to="." method="_on_check_area_exited"]
 [connection signal="body_entered" from="check" to="." method="_on_check_body_entered"]

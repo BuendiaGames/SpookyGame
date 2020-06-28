@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 main_controller="*res://core/main_controller.gd"
+music="*res://core/music.gd"
 
 [input]
 

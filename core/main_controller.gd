@@ -10,6 +10,8 @@ var key_spawner = "pumpkin_place" #Where will the key appear
 
 var death_positions = []
 
+var music_player 
+
 
 #Get player, GUI and and scene
 func _ready():
@@ -17,7 +19,10 @@ func _ready():
 	choose_scene_spawner()
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
-
+	
+	music_player = AudioStreamPlayer.new()
+	music_player.stream = preload("res://music/back/spooky_8d.ogg")
+	
 
 # ---------------- Key spawn ---------------------- #
 func choose_scene_spawner():
@@ -122,16 +127,10 @@ func _deferred_load_level(path, pos):
 	current_scene = s.instance()
 	free_key_if_not_spawn()
 	
-	# See if you won the game
 	
 	#Set up the new scene
 	current_scene.levelname = currentlevel()
 	current_scene.set_up(values, pos)
-	
-	if player != null:
-		#Rain on exteriors
-		if currentlevel():
-			player.get_node("camera/rain").emitting = true
 	
 	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)

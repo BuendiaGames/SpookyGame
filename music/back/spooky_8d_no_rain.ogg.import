@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/spooky_8d_no_rain.ogg-8740e0f0bfd4a30d2e03bc09f5f30a39.oggstr"
+
+[deps]
+
+source_file="res://music/back/spooky_8d_no_rain.ogg"
+dest_files=[ "res://.import/spooky_8d_no_rain.ogg-8740e0f0bfd4a30d2e03bc09f5f30a39.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

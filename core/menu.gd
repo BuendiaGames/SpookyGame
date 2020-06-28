@@ -21,7 +21,9 @@ func finish_intro():
 
 #Button actions
 func _on_start_pressed():
+	#main_controller.music_player.play
 	controller.goto_scene("forest", Vector2(-212, -144))
+	
 
 func _on_exit_pressed():
 	get_tree().quit()

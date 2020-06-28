@@ -77,13 +77,20 @@ func move_input(delta):
 		$anim.stop()
 		vel = Vector2(0.0, 0.0)
 	
+	if anim != "" and not $footsteps.playing:
+		$footsteps.play()
+	elif anim == "":
+		$footsteps.stop()
+	
 	#Check if we are running or not
 	if Input.is_action_pressed("run") and stamina > 0.0 and vel != Vector2(0.0,0.0):
 		current_speed = speed * run_factor
 		$anim.playback_speed = run_factor
 		reduce_stamina(delta)
+		$footsteps.pitch_scale = 1.5
 	else:
 		$anim.playback_speed = 1.0
+		$footsteps.pitch_scale = 1.0
 		current_speed = speed
 
 
