@@ -8,6 +8,7 @@ var rain_music = preload("res://music/back/spooky_8d.ogg")
 var no_rain_music = preload("res://music/back/spooky_8d_no_rain.ogg")
 
 func _ready():
+	pause_mode = Node.PAUSE_MODE_PROCESS
 	add_child(music_player)
 
 #Changes music when rain changes

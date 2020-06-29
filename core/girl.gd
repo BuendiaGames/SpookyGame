@@ -137,6 +137,8 @@ func _on_check_body_exited(body):
 func caught():
 	main_controller.add_death_position([main_controller.currentlevel(), position])
 	fade_out()
+	$footsteps.stop()
+	set_process(false)
 
 # ----------- Auxiliary stuff -----------#
 
